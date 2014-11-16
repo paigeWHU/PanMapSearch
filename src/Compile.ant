@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<project default="main" basedir="."> 
+<property name="src.lib" value="org.lmars.sparql.parser"/>
+<property name="src.dir" location="./org/lmars/sparql/parser"/>
+<target name="main">
+<java fork="true" classname="org.antlr.v4.Tool" classpath="../lib/antlr-4.4-complete.jar">
+	<arg line="${src.dir}/Sparql.g4 -package ${src.lib} -o ${src.dir}" />
+</java>
+</target>
+</project>

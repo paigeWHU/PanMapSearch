@@ -1,0 +1,1616 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <Prefix name="" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
+    <Prefix name="Ontology1415628375607" IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#"/>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:ConstructionWork"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLatitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingInfo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Position"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Rafter"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_City"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Color"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Obstacle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Lamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:NavigateMapFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Corridor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Ceiling"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:ClosureSurface"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Room"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Hole"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Breast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="NickName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Country"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:OfficeDesk"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Glass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Description"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Stairway"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="SomeWhat"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:MeetingRoom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLongitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectID"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Building"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Sofa"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofMaterial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="A214"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Laboratory"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Condition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_URL"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:MovingWalkway"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidAltitude"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Surface"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Table"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Ramp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Room"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Style"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Chair"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeColor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Pipe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Name"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Object"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Material"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofShape"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Lobby"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:PointOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofColor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Area"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:MaxLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:MinLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Portal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Direction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Width"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Bookcase"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:ComputerRoom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:ExitEntrance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingDate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Elevator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Roof"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Toilet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Radiator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:FunctionRoom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Ground"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeMaterial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Reserch_Dir"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Exit"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Wall"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Entrance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Pillar"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Housenumber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Street"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="Own"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StaffPosition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Parition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:ControlDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Balcony"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:EscapeLadder"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Window"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:NumberOfLevels"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Chimney"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Connectrelation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:People"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SmallRoom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Ontology1415628375607:Escalator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Architect"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="NickName"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Area"/>
+        <Class abbreviatedIRI="Ontology1415628375607:PointOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Balcony"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Obstacle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Bookcase"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Surface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Building"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+        <Class IRI="Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Ceiling"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Chair"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Chimney"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:ClosureSurface"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:ClosureSurface"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:ComputerRoom"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:ConstructionWork"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Obstacle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Corridor"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Elevator"/>
+        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Entrance"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Escalator"/>
+        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:EscapeLadder"/>
+        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Exit"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:ExitEntrance"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:FunctionRoom"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Ground"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Laboratory"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Lamp"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Lobby"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:MeetingRoom"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:MovingWalkway"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Object"/>
+        <Class abbreviatedIRI="Ontology1415628375607:PointOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:OfficeDesk"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Portal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Parition"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Pillar"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Pipe"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Radiator"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Rafter"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Ramp"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Roof"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Sofa"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Stairway"/>
+        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
+        <Class abbreviatedIRI="Ontology1415628375607:People"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Table"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
+        <Class abbreviatedIRI="Ontology1415628375607:People"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Toilet"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Wall"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Wall"/>
+        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Window"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Ontology1415628375607:Window"/>
+        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SmallRoom"/>
+        <Class IRI="Room"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Building"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Ontology1415628375607:ComputerRoom"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="A214"/>
+        <NamedIndividual IRI="Room"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">一楼</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">三楼</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">二楼</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">呙维</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Reserch_Dir"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">智慧城市时空数据流计算、自然语言位置解析、机器人导航与Kinect实时制图等</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">男</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StaffPosition"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">副教授</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_URL"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.lmars.whu.edu.cn/WebSiteDetail.asp?webid=178&amp;type=4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_City"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">武汉</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Country"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">中国</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Housenumber"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">129</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Street"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">珞瑜路</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Architect"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">钢筋混凝土</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingDate"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1998</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingInfo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidAltitude"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLatitude"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">30.533527
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLongitude"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">114.366721
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Condition"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">建成</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Description"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeColor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">白色</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeMaterial"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">乳胶漆</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:MaxLevel"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:MinLevel"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">实验室</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:NavigateMapFile"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:NumberOfLevels"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">武汉大学</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofColor"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">黑色</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofMaterial"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">沥青</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofShape"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">长方形</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Style"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">中式风格</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">教学科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">朱欣焰</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Reserch_Dir"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">分布式空间数据库，webGIS,移动GIS应用，地理空间信息网络服务
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">男</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StaffPosition"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">空间信息系统研究室主任</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">205</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_URL"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.lmars.whu.edu.cn/prof_web/zhuxinyan/index.html#</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">研一</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">李灿
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">女</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">327</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2014206190005</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">朱欣焰</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">205</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">研一</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">杨龙龙</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">男</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">327</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2014206190001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">朱欣焰</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">205</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">研二</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">黄珺</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">女</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">327</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2013206190076</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">朱欣焰</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">205</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">呙维</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">办公室</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">205</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">朱欣焰</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">办公室</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">B1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">科研</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">327</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NULL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">实验室</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">机房</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="SomeWhat"/>
+        <ObjectProperty IRI="Own"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
+    </SymmetricObjectProperty>
+    <SubDataPropertyOf>
+        <DataProperty IRI="NickName"/>
+        <DataProperty IRI="Name"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="NickName"/>
+        <DataProperty IRI="Name"/>
+    </SubDataPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.0.0-RC2) http://owlapi.sourceforge.net -->
+
