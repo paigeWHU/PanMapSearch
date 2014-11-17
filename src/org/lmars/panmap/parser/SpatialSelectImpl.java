@@ -51,6 +51,17 @@ public interface SpatialSelectImpl {
 	 * 行第一种语法规则的三元组查询函数:3、	已知变量+属性+待求变量
 	 */
 	public abstract void triple_execute_rule3(Map<String, String> args);
+	
+	
+	/*
+	 * 行第一种语法规则的三元组查询函数:4、	已知变量+属性+值
+	 */
+	public abstract void triple_execute_rule4(Map<String, String> args);
+	
+	/*
+	 * 行第一种语法规则的三元组查询函数:5、	已知变量+属性+已知变量
+	 */
+	public abstract void triple_execute_rule5(Map<String, String> args);
 
 	/*
 	 * 对于操作符语法规则的逻辑查询执行函数，参数为以expression为根节点的树，在循环嵌套的过程中遍历树完成全部的查询工作

@@ -44,14 +44,11 @@ public class GrammarParser extends SparqlBaseListener{
 	
 	@Override public void exitQuery(@NotNull SparqlParser.QueryContext ctx) 
 	{
-//		System.out.println("coming out of Query()");
-		//输出空间查询对象所存储的全部内容
-		Iterator<Variable> iterator = this.spatialSelect.Vars.iterator();
-		while (iterator.hasNext()) {
-			Variable variable = iterator.next();
-			String nameString =  variable.VarName();
-			Set<String> set = spatialSelect.GetValue(nameString);
-			System.out.println(nameString+":"+String.valueOf(set));
+
+		Set<String> setResulteSet =  spatialSelect.SelectResult();
+		Iterator<String> iterator = setResulteSet.iterator();
+		while (iterator.hasNext()) {			
+			System.out.println(iterator.next());
 		}
 
 	}
@@ -181,6 +178,28 @@ public class GrammarParser extends SparqlBaseListener{
 			break;
 		case 3:
 			spatialSelect.triple_execute_rule3(paramMap);
+			break;
+		case 4:
+			spatialSelect.triple_execute_rule4(paramMap);
+			break;
+		case 5:
+			spatialSelect.triple_execute_rule5(paramMap);
+			break;
+		case 6:
+			//抛出异常
+			System.out.print("unknown condition");
+			break;
+		case 7:
+			//抛出异常
+			System.out.print("unknown condition");
+			break;
+		case 8:
+			//抛出异常
+			System.out.print("unknown condition");
+			break;
+		case 9:
+			//抛出异常
+			System.out.print("unknown condition");
 			break;
 		default:
 			break;

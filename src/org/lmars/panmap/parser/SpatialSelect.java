@@ -1,6 +1,7 @@
 package org.lmars.panmap.parser;
 import org.lmars.sparql.parser.*;
 import org.antlr.v4.codegen.model.chunk.ThisRulePropertyRef_ctx;
+import org.antlr.v4.parse.ANTLRParser.id_return;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -176,20 +177,12 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 根据变量类IsSelect属性得到最终要查询的变量结果
 	 */
-	private Set<String> SelectResult(){
+	public Set<String> SelectResult(){
 		Iterator<Variable> iterator = this.Vars.iterator();
 		while (iterator.hasNext()) {
 			Variable variable = iterator.next();
 			if(variable.IsSelect){
-				Set set = new HashSet<String>();
-				Set     set1     =     variable.varMap.entrySet();   
-		        Iterator     iterator1     =     set1.iterator();   
-		        while     (iterator1.hasNext()  ) 
-		        {   
-		          Map.Entry     mapentry     =     (Map.Entry)     iterator1.next();   
-		          set = (Set<String>)mapentry.getValue();		        
-		        }   
-		       return set;								
+		       return variable.VarIri();								
 			}			
 		}
 		return null;
@@ -213,7 +206,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 		//得到主体的iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
-//		System.out.print(set.size());
 		Iterator<String> it = set.iterator();
 		while (it.hasNext()) {
 			subIriString = it.next();
@@ -221,7 +213,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 		}
 		//得到属性的iri
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
-//		System.out.print(pvIri);
 		//读书本体的所有实例赋值给tempIri		
 		tempIri = instance.readAllInstancesOfClass(subIriString);
 		
@@ -232,17 +223,21 @@ public class SpatialSelect implements SpatialSelectImpl{
 			String string = iterator.next();
 			
 			//看实例的property属性是否为值 是的话加入到var1Iri
-			 Set<String> result1 = instance.readPropertyValueOfInstance(pvIri, string);
-			 Iterator<String> iterable2 = result1.iterator();
-			 while (iterable2.hasNext()) {
-				String string2 = (String) iterable2.next();
-//				System.out.print(string2);
-//				String string3 = new String("朱欣焰");
-				if(string2.equals(objectString)){
+			 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+			 //得到结果组成的字符串
+			 String resultString = "";
+			    Iterator iteratorResult = setResult.iterator();
+			    while (iteratorResult.hasNext()) {
+					String tempString = (String) iteratorResult.next();
+					resultString = resultString + tempString;
+					if (iteratorResult.hasNext()) {
+						resultString += ",";
+					}
+			    }
+			
+				if(resultString.equals(objectString)){
 					var1Iri.add(string);
-//					System.out.print("yese!!");
 				}
-			}
 		}
 		//添加变量到Vars						
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
@@ -269,10 +264,15 @@ public class SpatialSelect implements SpatialSelectImpl{
 		Set<String> var1Iri = new HashSet<String>();
 		//首先得到已知变量的Set<String>
 		Set<String> objectSet = this.GetValue(objectString);
+		//当objectSet为空将objectSet赋值为owl本体全部的实例
+		boolean isObjNull = true;
+		if (objectSet.size()==0) {
+			isObjNull = true;//为空
+			objectSet = instance.readAllInstances();
+		}
 		//得到本体的iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
-//		System.out.print(set.size());
 		Iterator<String> it = set.iterator();
 		while (it.hasNext()) {
 			subIriString = it.next();
@@ -288,8 +288,18 @@ public class SpatialSelect implements SpatialSelectImpl{
 		while (iterator.hasNext()) {
 			String string = (String) iterator.next();//遍历实例
 			Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
-			if(objectSet.equals(setResult)){
-				System.out.print("yes2");
+			
+			if(!isObjNull){
+				if(objectSet.equals(setResult)){
+					System.out.print("yes2");
+					var1Iri.add(string);
+			}
+			
+			}else {
+				if(objectSet.contains(setResult)){
+					var1Iri.add(string);
+					System.out.print("yes2");
+				}
 			}
 			
 		}
@@ -320,7 +330,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 		//得到本体的iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
-//		System.out.print(set.size());
 		Iterator<String> it = set.iterator();
 		while (it.hasNext()) {
 			subIriString = it.next();
@@ -328,7 +337,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 		}
 		Set<String> tempIri = new HashSet<String>();
 		if (subSet.size()==0) {
-//			System.out.print("hahah");
 			tempIri = instance.readAllInstancesOfClass(subIriString);
 			this.SetValue(subjectString, tempIri);
 			subSet = this.GetValue(subjectString);
@@ -343,8 +351,18 @@ public class SpatialSelect implements SpatialSelectImpl{
 		while (it1.hasNext()) {
 			String string = (String) it1.next();
 			Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+			//将setResult整合成以逗号分隔的字符串
+		    String resultString = "";
+		    Iterator iterator = setResult.iterator();
+		    while (iterator.hasNext()) {
+				String tempString = (String) iterator.next();
+				resultString = resultString + tempString;
+				if (iterator.hasNext()) {
+					resultString += ",";
+				}
+			}
 			if(setResult.size()!=0)
-			var1Iri.add(String.valueOf(setResult));
+			var1Iri.add(resultString);
 		}
 		
 		
@@ -356,10 +374,93 @@ public class SpatialSelect implements SpatialSelectImpl{
 		//最终求出待求变量，并将其保存
 		this.AddVars(objectString, var1);
 		this.SetValue(objectString, var1Iri);
-		System.out.print(objectString+":"+String.valueOf(this.GetValue(objectString)));
 		
 	}
 	
+	
+	/*
+	 * 行第一种语法规则的三元组查询函数:4、	已知变量+属性+值
+	 */
+	@Override
+	public void triple_execute_rule4(Map<String, String> args) {
+		// TODO Auto-generated method stub
+		
+
+		String subjectString = args.get("Subject");
+		String prifixString = args.get("Prefix");
+		String propertyString = args.get("Property");
+		String objectString = args.get("Object");
+		Set<String> var1Iri = new HashSet<String>();
+		Set<String> subIri = new HashSet<String>();
+		//得到主体的iri
+		String subIriString = "";
+		Set<String> set =  this.GetValue(prifixString);
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			subIriString = it.next();
+			
+		}
+		//得到属性的iri
+		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
+		//得到已知变量的值	
+		subIri = this.GetValue(subjectString);
+		
+		//遍历subIri 看实例的property属性是否为值 是的话加入到var1Iri
+		Iterator<String> iterator = subIri.iterator();
+		while(iterator.hasNext()){
+			
+			String string = iterator.next();			
+			//看实例的property属性是否为值 是的话加入到var1Iri
+			 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+			 //得到结果组成的字符串
+			 String resultString = "";
+			    Iterator iteratorResult = setResult.iterator();
+			    while (iteratorResult.hasNext()) {
+					String tempString = (String) iteratorResult.next();
+					resultString = resultString + tempString;
+					if (iteratorResult.hasNext()) {
+						resultString += ",";
+					}
+			    }
+			
+				if(resultString.equals(objectString)){
+					var1Iri.add(string);
+				}
+		}
+		
+		//更新已知变量的值
+		this.SetValue(subjectString, var1Iri);
+		
+		
+	}
+
+	/*
+	 * 行第一种语法规则的三元组查询函数:5、	已知变量+属性+已知变量
+	 */
+	@Override
+	public void triple_execute_rule5(Map<String, String> args) {
+		// TODO Auto-generated method stub
+		
+		String subjectString = args.get("Subject");
+		String prifixString = args.get("Prefix");
+		String propertyString = args.get("Property");
+		String objectString = args.get("Object");
+	
+		//求出主语已知变量的值
+		Set<String> subSet = this.GetValue(subjectString);
+		//求出宾语已知变量的值
+		Set<String> objSet = this.GetValue(objectString);
+		if(subSet.size()==0&&objSet.size()!=0){
+			triple_execute_rule2(args);
+		}else if(subSet.size()!=0&&objSet.size()==0){
+		
+			triple_execute_rule3(args);
+		}else {
+			//抛出异常
+			System.out.print("both the subject and the object are unknown");
+		}
+		
+	}
 	
 	/*
 	 * 执行第一种filter约束语法规则的查询逻辑：返回true false的函数语法规则
@@ -488,8 +589,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 	 * 判断两个本体实例之间是否存在对面的关系
 	 */
 	private boolean Opposite(String iri1, String iri2){
-		System.out.print("第一个参数为: "+iri1+"\n");
-		System.out.print("第二个参数为: "+iri2+"\n");
 		return true;
 	}
 	
@@ -583,6 +682,18 @@ public class SpatialSelect implements SpatialSelectImpl{
 			resultType = 2;
 		}else if (type1==2&&type2==1) {
 			resultType = 3;
+		}else if (type1==2&&type2==3) {
+			resultType = 4;
+		}else if (type1==2&&type2==2) {
+			resultType = 5;
+		}else if (type1==3&&type2==3) {
+			resultType = 6;
+		}else if (type1==3&&type2==2) {
+			resultType = 7;
+		}else if (type1==1&&type2==1) {
+			resultType = 8;
+		}else if (type1==3&&type2==1) {
+			resultType = 9;
 		}
 		
 		
@@ -644,7 +755,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 				//若为操作符约束，则直接调用excute_tree_exper函数得到true或者false来判断当前的index是否满足要求
 				if(ctx.constraint().expression()!=null){
 					//操作符约束，调用excute_tree_exper
-//					System.out.print("hahahahah");
 					filterResult = Boolean.parseBoolean(filter_excute_exper(ctx.constraint().expression()));
 				}else if(ctx.constraint().functionList() != null){
 		
@@ -778,4 +888,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 				
 		return null;
 	}
+
+
 }

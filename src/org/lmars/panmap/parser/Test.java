@@ -19,15 +19,15 @@ public class Test {
 				+ "?TeacherX   Teacher:Has_Office ?Room_X ."
 				+ "FILTER (Opposite(?Room_X,?Room_Zhu)) ."
 				+ "}"
+				,
+				"PREFIX Teacher: <http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#Teacher>"
+				+ "Select ?Student_Zhu "
+				+ "Where"
+				+ "{"
+				+ "?Teacher_Zhu Teacher:Name \"÷Ï–¿—Ê\" ."
+				+ "?Teacher_Zhu  Teacher:Teach ?Student_Zhu ."
 				
-//				"PREFIX Teacher: <http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#Teacher>"
-//				+ "Select ?Student_Zhu "
-//				+ "Where"
-//				+ "{"
-//				+ "?Teacher_Zhu Teacher:Name \"÷Ï–¿—Ê\" ."
-//				+ "Teacher_Zhu?  Teacher:Name ?Student_Zhu ."
-//				
-//				+ "}"
+				+ "}"
 										     	
 		};
 		
