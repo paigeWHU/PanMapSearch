@@ -1,5 +1,6 @@
 package org.lmars.panmap.parser;
 import org.antlr.v4.parse.ANTLRParser.prequelConstruct_return;
+import org.antlr.v4.parse.ANTLRParser.sync_return;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.TokenStream;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -10,7 +11,9 @@ import org.antlr.v4.tool.Rule;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.lmars.sparql.parser.SparqlParser.QueryContext;
 import org.owlapi.OWL;
+
 import java.util.*;
+
 import org.lmars.sparql.parser.*;
 
 public class GrammarParser extends SparqlBaseListener{
@@ -45,7 +48,11 @@ public class GrammarParser extends SparqlBaseListener{
 	@Override public void exitQuery(@NotNull SparqlParser.QueryContext ctx) 
 	{
 
+	
+
+
 		Set<String> setResulteSet =  spatialSelect.SelectResult();
+		
 		Iterator<String> iterator = setResulteSet.iterator();
 		while (iterator.hasNext()) {			
 			System.out.println(iterator.next());
@@ -81,9 +88,9 @@ public class GrammarParser extends SparqlBaseListener{
 		sizeOfselectvariable = ctx.selectVariables().size();
 		for(int i = 0;i<sizeOfselectvariable;i++)
 		{
-			Set<String> set = new HashSet<String>();		
+//			Set<String> set = new HashSet<String>();		
 			Map<String,Set<String>> varmap = new HashMap<String,Set<String>>();
-			varmap.put(ctx.selectVariables(i).getText(), set);
+			varmap.put(ctx.selectVariables(i).getText(), null);
 			Variable variable = new Variable(varmap);
 			spatialSelect.AddVars(ctx.selectVariables(i).getText(), variable);
 			spatialSelect.SetSelect(ctx.selectVariables(i).getText());
@@ -146,8 +153,6 @@ public class GrammarParser extends SparqlBaseListener{
 	
 	@Override public void enterTriplesSameSubjectPath(@NotNull SparqlParser.TriplesSameSubjectPathContext ctx) 
 	{
-//		System.out.println("coming into TriplesSameSubjectPath()");
-
 		//得到第一个参数的名字
 		String subjectString = ctx.varOrTerm().getText();
 		//得到本体的宏定义名称
@@ -156,7 +161,7 @@ public class GrammarParser extends SparqlBaseListener{
 		String prefixString =  temp.split(":")[0];
 		//得到属性的名称
 		String propertyString = temp.split(":")[1];
-		//得到第二个参数的名字  ！！！！！！！！！！！！！！！再看一下这里的语法规则
+		//得到第二个参数的名字
 		String objectString = ctx.propertyListPathNotEmpty().objectListPath().objectPath().get(0).graphNodePath().varOrTerm().getText();
 		//创建参数
 		Map<String,String> paramMap = new HashMap<String,String>();
@@ -164,86 +169,14 @@ public class GrammarParser extends SparqlBaseListener{
 		paramMap.put("Prefix",prefixString);
 		paramMap.put("Property", propertyString);
 		paramMap.put("Object", objectString);
-		//调用函数判断三元组语法的规则
+		//添加进三元组数组
+		Triple triple = new Triple(paramMap);
+		spatialSelect.Triples.add(triple);
+		//调用总的三元组执行函数
+		spatialSelect.triple_excute(paramMap);	
 		
-		//根据不同的语法规则
-		int type = spatialSelect.juge_triple_condition(paramMap);
-		
-		switch (type) {
-		case 1:
-			spatialSelect.triple_execute_rule1(paramMap);
-			break;
-		case 2:
-			spatialSelect.triple_execute_rule2(paramMap);
-			break;
-		case 3:
-			spatialSelect.triple_execute_rule3(paramMap);
-			break;
-		case 4:
-			spatialSelect.triple_execute_rule4(paramMap);
-			break;
-		case 5:
-			spatialSelect.triple_execute_rule5(paramMap);
-			break;
-		case 6:
-			//抛出异常
-			System.out.print("unknown condition");
-			break;
-		case 7:
-			//抛出异常
-			System.out.print("unknown condition");
-			break;
-		case 8:
-			//抛出异常
-			System.out.print("unknown condition");
-			break;
-		case 9:
-			//抛出异常
-			System.out.print("unknown condition");
-			break;
-		default:
-			break;
-		}
-//		System.out.println(ctx.varOrTerm().getText());
-		
+	
 	}
-	
-	@Override public void exitTriplesSameSubjectPath(@NotNull SparqlParser.TriplesSameSubjectPathContext ctx) 
-	{
-//		System.out.println("coming out from TriplesSameSubjectPath()");
-	}
-	
-	
-	@Override public void enterPathPrimary(@NotNull SparqlParser.PathPrimaryContext ctx) 
-	{
-//		System.out.println("coming into PathPrimary()");
-		if(ctx.iri() != null)
-		{
-			String string = ctx.iri().prefixedName().PNAME_LN().getText();
-			int i = string.indexOf(":");
-			
-//			System.out.print(string.substring(0, i-1)+","+string.substring(i+1));
-		}
-	}
-	
-	 
-	@Override public void exitPathPrimary(@NotNull SparqlParser.PathPrimaryContext ctx) 
-	{
-//		System.out.println("coming out from PathPrimary()");
-	}
-	
-	
-	
-	@Override public void enterGroupGraphPatternSubList(@NotNull SparqlParser.GroupGraphPatternSubListContext ctx) 
-	{
-//		System.out.println("coming into GroupGraphPatternSubList()");
-	}
-	
-	@Override public void exitGroupGraphPatternSubList(@NotNull SparqlParser.GroupGraphPatternSubListContext ctx) 
-	{
-//		System.out.println("coming out from GroupGraphPatternSubList()");
-	}
-	
 	
 	@Override public void enterFilter(@NotNull SparqlParser.FilterContext ctx) 
 	{
@@ -255,7 +188,12 @@ public class GrammarParser extends SparqlBaseListener{
 	@Override public void exitFilter(@NotNull SparqlParser.FilterContext ctx) 
 	{
 		grammerString = "NoFilter";//从filter的语法出去
+	//	Iterator<Variable> iterator = spatialSelect.Vars.iterator();
+		
+		
 		spatialSelect.filter_excute(ctx);
+		//从新回溯调用三元组 更新所有变量
+		spatialSelect.tirple_excute_racall();
 	}
 	
 	
@@ -265,33 +203,13 @@ public class GrammarParser extends SparqlBaseListener{
 		if(grammerString=="Filter"){
 			//存储到变量FilterVars中
 			String nameString = ctx.getText();
-			Iterator<Variable> iterator = spatialSelect.Vars.iterator();
-			while(iterator.hasNext()){
-				Variable variable = iterator.next();
-				if(variable.varMap.get(nameString)!=null){
-					spatialSelect.AddFikterVars(nameString, variable);
-				}
-			}
+			Variable variable = spatialSelect.GetVarsVar(nameString);
+			spatialSelect.AddFikterVars(nameString, variable);
 		}
 	}
 
 	@Override public void exitVar(@NotNull SparqlParser.VarContext ctx) { }
 	
-	
-	@Override public void enterFunction(@NotNull SparqlParser.FunctionContext ctx)
-	{
-
-		int sizeOfparam = ctx.paramDeclList().expression().size();
-
-		for(int i = 0;i<sizeOfparam;i++){
-//			System.out.println(ctx.paramDeclList().expression(i).getText());
-		}
-	}
-	
-	@Override public void exitFunction(@NotNull SparqlParser.FunctionContext ctx) 
-	{
-		
-	}
 	
 	
 

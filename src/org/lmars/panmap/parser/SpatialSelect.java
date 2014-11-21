@@ -18,13 +18,14 @@ import java.util.regex.Pattern;
 
 import org.owlapi.OWL;
 import org.stringtemplate.v4.compiler.CodeGenerator.region_return;  
-public class SpatialSelect implements SpatialSelectImpl{
+public class SpatialSelect {
 	
 	/*
 	 * 构造函数
 	 */
 	public SpatialSelect() {
 		this.Vars = new ArrayList<Variable>();
+		this.Triples = new ArrayList<Triple>();
 		this.FilterVars = new ArrayList<Variable>();
 		this.IndexSet =new HashSet<int[]>();
 		this.instance = new OWL(owlFilePath);
@@ -35,6 +36,7 @@ public class SpatialSelect implements SpatialSelectImpl{
 	 * 存储查询过程中需要的变量。包括Prefix以及一些未知和带入的变量
 	 */
 	public ArrayList<Variable> Vars;//在查询过程中用到的变量
+	public ArrayList<Triple> Triples;
 	private int[] index;//保存在计算约束时此时的index
 	private Set<int[]> IndexSet;//保存满足条件的index的集合
 	String owlFilePath = "ontology/building.owl"; /* OWL文件路径 */
@@ -49,10 +51,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 根据变量名称获得变量值
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#GetValue(java.lang.String)
-	 */
-	@Override
 	public Set<String> GetValue(String name) {
 	
 //		String[] str = new String[0];
@@ -75,25 +73,15 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/* (non-Javadoc)
 	 * @see org.lmars.panmap.parser.SpatialSelectImpl#SetValue(java.lang.String, java.util.Set)
 	 */
-	@Override
 	public void SetValue(String name,Set<String> iris) {
 		String[] str = new String[0];
-		Iterator<Variable> iterator = this.Vars.iterator();
-		while (iterator.hasNext()) {
-			Variable variable = iterator.next();
-			if(variable.varMap.get(name) != null){
-				variable.varMap.put(name, iris);
-				}
-			}
-			
-		
+		GetVarsVar(name).varMap.put(name, iris);		
 	}
 	
 	
 	/* (non-Javadoc)
 	 * @see org.lmars.panmap.parser.SpatialSelectImpl#GetFilterValue(java.lang.String)
 	 */
-	@Override
 	public Set<String> GetFilterValue(String name) {
 		
 //		String[] str = new String[0];
@@ -117,7 +105,6 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/* (non-Javadoc)
 	 * @see org.lmars.panmap.parser.SpatialSelectImpl#SetFilterValue(java.lang.String, java.util.Set)
 	 */
-	@Override
 	public void SetFilterValue(String name,Set<String> iris) {
 		String[] str = new String[0];
 		Iterator<Variable> iterator = this.FilterVars.iterator();
@@ -138,13 +125,15 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/* (non-Javadoc)
 	 * @see org.lmars.panmap.parser.SpatialSelectImpl#SetSelect(java.lang.String)
 	 */
-	@Override
+	
 	public void SetSelect(String name) {
 		
 		Iterator<Variable> iterator = this.Vars.iterator();
 		while (iterator.hasNext()) {
 			Variable variable = iterator.next();
-			if(variable.varMap.get(name) != null){
+//			
+			if(variable.VarName().equals(name)){
+//			
 				variable.IsSelect = true;
 			}
 			
@@ -158,13 +147,13 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/* (non-Javadoc)
 	 * @see org.lmars.panmap.parser.SpatialSelectImpl#GetSelect(java.lang.String)
 	 */
-	@Override
+	
 	public boolean GetSelect(String name) {
 		
 		Iterator<Variable> iterator = this.Vars.iterator();
 		while (iterator.hasNext()) {
 			Variable variable = iterator.next();
-			if(variable.varMap.get(name) != null){
+			if(variable.VarName().equals(name)){
 				return variable.IsSelect;
 			}
 			
@@ -178,11 +167,16 @@ public class SpatialSelect implements SpatialSelectImpl{
 	 * 根据变量类IsSelect属性得到最终要查询的变量结果
 	 */
 	public Set<String> SelectResult(){
+		
+	
+		
 		Iterator<Variable> iterator = this.Vars.iterator();
 		while (iterator.hasNext()) {
 			Variable variable = iterator.next();
+			
 			if(variable.IsSelect){
-		       return variable.VarIri();								
+//				System.out.print(variable.VarName()+variable.IsSelect);
+				return GetValue(variable.VarName());								
 			}			
 		}
 		return null;
@@ -191,11 +185,8 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 执行第一种语法规则的三元组查询函数:1、	待求变量+属性+值
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#triple_execute_rule1(java.util.Map)
-	 */
-	@Override
-	public void triple_execute_rule1 (Map<String ,String>args){
+	
+	private void triple_execute_rule1 (Map<String ,String>args){
 
 		String subjectString = args.get("Subject");
 		String prifixString = args.get("Prefix");
@@ -245,17 +236,15 @@ public class SpatialSelect implements SpatialSelectImpl{
 		Variable var1 = new Variable(var1Map);
 		//最终求出待求变量，并将其保存
 		this.AddVars(subjectString, var1);
+		this.SetValue(subjectString, var1Iri);
 	}
 	
 	
 	/*
 	 * 执行第一种语法规则的三元组查询函数:2、	待求变量+属性+已知变量
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#triple_execute_rule2(java.util.Map)
-	 */
-	@Override
-	public void triple_execute_rule2 (Map<String ,String>args){
+	
+	private void triple_execute_rule2 (Map<String ,String>args){
 		String subjectString = args.get("Subject");
 		String prifixString = args.get("Prefix");
 		String propertyString = args.get("Property");
@@ -265,11 +254,13 @@ public class SpatialSelect implements SpatialSelectImpl{
 		//首先得到已知变量的Set<String>
 		Set<String> objectSet = this.GetValue(objectString);
 		//当objectSet为空将objectSet赋值为owl本体全部的实例
-		boolean isObjNull = true;
-		if (objectSet.size()==0) {
+		boolean isObjNull = false;
+		if (objectSet==null&&GetSelect(objectString)) {
+			System.out.print("haha1");
 			isObjNull = true;//为空
 			objectSet = instance.readAllInstances();
 		}
+		
 		//得到本体的iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
@@ -279,26 +270,36 @@ public class SpatialSelect implements SpatialSelectImpl{
 			
 		}
 		//得到待求变量的过滤前的实例
-		tempIri = instance.readAllInstancesOfClass(subIriString);
+		if(GetValue(subjectString)!=null){
+			
+			tempIri = GetValue(subjectString);
+		}else {
+			tempIri = instance.readAllInstancesOfClass(subIriString);
+		}
+		
 		
 		//得到属性的iri
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
 		//遍历tempIri找到满足属性要求的实例
 		Iterator<String> iterator = tempIri.iterator();
-		while (iterator.hasNext()) {
+
+		while (objectSet.size()!=0&&iterator.hasNext()) {
 			String string = (String) iterator.next();//遍历实例
 			Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
 			
 			if(!isObjNull){
-				if(objectSet.equals(setResult)){
-					System.out.print("yes2");
+				
+				if(objectSet.equals(setResult)||objectSet.contains(setResult)){
+//					System.out.print(String.valueOf(objectSet.size())+"!"+String.valueOf(setResult.size())+"\n");
 					var1Iri.add(string);
 			}
 			
 			}else {
+				
 				if(objectSet.contains(setResult)){
+					
 					var1Iri.add(string);
-					System.out.print("yes2");
+					
 				}
 			}
 			
@@ -309,17 +310,17 @@ public class SpatialSelect implements SpatialSelectImpl{
 		Variable var1 = new Variable(var1Map);
 		//最终求出待求变量，并将其保存
 		this.AddVars(subjectString, var1);
+	
+		this.SetValue(subjectString, var1Iri);
+		
 	}
 	
 		
 	/*
 	 * 行第一种语法规则的三元组查询函数:3、	已知变量+属性+待求变量
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#triple_execute_rule3(java.util.Map)
-	 */
-	@Override
-	public void triple_execute_rule3 (Map<String ,String>args){
+
+	private void triple_execute_rule3 (Map<String ,String>args){
 
 		String subjectString = args.get("Subject");
 		String prifixString = args.get("Prefix");
@@ -336,10 +337,11 @@ public class SpatialSelect implements SpatialSelectImpl{
 			
 		}
 		Set<String> tempIri = new HashSet<String>();
-		if (subSet.size()==0) {
+		if (subSet==null&&GetSelect(subjectString)) {
 			tempIri = instance.readAllInstancesOfClass(subIriString);
 			this.SetValue(subjectString, tempIri);
 			subSet = this.GetValue(subjectString);
+			
 			
 		}
 		
@@ -350,30 +352,40 @@ public class SpatialSelect implements SpatialSelectImpl{
 		Iterator<String> it1 = subSet.iterator();
 		while (it1.hasNext()) {
 			String string = (String) it1.next();
+//			System.out.print("@"+string+"#"+"\n");
 			Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+//			System.out.print("@"+String.valueOf(setResult)+"#"+"\n");
 			//将setResult整合成以逗号分隔的字符串
 		    String resultString = "";
 		    Iterator iterator = setResult.iterator();
 		    while (iterator.hasNext()) {
-				String tempString = (String) iterator.next();
-				resultString = resultString + tempString;
-				if (iterator.hasNext()) {
-					resultString += ",";
-				}
+		    	var1Iri.add((String)iterator.next());
+//				String tempString = (String) iterator.next();
+//				resultString = resultString + tempString;
+//				if (iterator.hasNext()) {
+//					resultString += ",";
+//				}
 			}
-			if(setResult.size()!=0)
-			var1Iri.add(resultString);
+//			if(setResult.size()!=0)
+//			var1Iri.add(resultString);
 		}
 		
+	
 		
 		
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
 		var1Map.put(objectString, var1Iri);
 		
 		Variable var1 = new Variable(var1Map);
+		
+		
+		
 		//最终求出待求变量，并将其保存
 		this.AddVars(objectString, var1);
 		this.SetValue(objectString, var1Iri);
+
+		
+		
 		
 	}
 	
@@ -381,8 +393,8 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 行第一种语法规则的三元组查询函数:4、	已知变量+属性+值
 	 */
-	@Override
-	public void triple_execute_rule4(Map<String, String> args) {
+	
+	private void triple_execute_rule4(Map<String, String> args) {
 		// TODO Auto-generated method stub
 		
 
@@ -402,16 +414,25 @@ public class SpatialSelect implements SpatialSelectImpl{
 		}
 		//得到属性的iri
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
+		
 		//得到已知变量的值	
 		subIri = this.GetValue(subjectString);
-		
+		if(subIri==null&&GetSelect(subjectString)){
+			//如果已知变量是select的变量且一直未被赋值则对其进行初始化
+			subIri = instance.readAllInstancesOfClass(subIriString);
+			
+			SetValue(subjectString, subIri);
+			
+		}
 		//遍历subIri 看实例的property属性是否为值 是的话加入到var1Iri
 		Iterator<String> iterator = subIri.iterator();
 		while(iterator.hasNext()){
 			
-			String string = iterator.next();			
+			String string = iterator.next();	
+//			 System.out.print(string);
 			//看实例的property属性是否为值 是的话加入到var1Iri
 			 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+//			 System.out.print(setResult.size());
 			 //得到结果组成的字符串
 			 String resultString = "";
 			    Iterator iteratorResult = setResult.iterator();
@@ -437,8 +458,8 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 行第一种语法规则的三元组查询函数:5、	已知变量+属性+已知变量
 	 */
-	@Override
-	public void triple_execute_rule5(Map<String, String> args) {
+	
+	private void triple_execute_rule5(Map<String, String> args) {
 		// TODO Auto-generated method stub
 		
 		String subjectString = args.get("Subject");
@@ -450,9 +471,10 @@ public class SpatialSelect implements SpatialSelectImpl{
 		Set<String> subSet = this.GetValue(subjectString);
 		//求出宾语已知变量的值
 		Set<String> objSet = this.GetValue(objectString);
-		if(subSet.size()==0&&objSet.size()!=0){
+	
+		if(subSet==null&&objSet!=null){
 			triple_execute_rule2(args);
-		}else if(subSet.size()!=0&&objSet.size()==0){
+		}else if(subSet!=null&&objSet==null){
 		
 			triple_execute_rule3(args);
 		}else {
@@ -490,10 +512,7 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 对于操作符语法规则的逻辑查询执行函数，参数为以expression为根节点的树，在循环嵌套的过程中遍历树完成全部的查询工作
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#filter_excute_exper(org.antlr.v4.runtime.tree.ParseTree)
-	 */
-	@Override
+	
 	public String filter_excute_exper(ParseTree  expression){
 
 		//得到当前操作符语句的操作符
@@ -506,12 +525,29 @@ public class SpatialSelect implements SpatialSelectImpl{
 			str_result_left = filter_excute_exper(expression.getChild(0));//求得第一个操作数的值
 			str_result_right = filter_excute_exper(expression.getChild(2));//求得第二个操作数的值
 			
+			if(str_result_left.startsWith("\"")){
+				str_result_left = str_result_left.split("\"")[1];
+			}
+			if(str_result_right.startsWith("\"")){
+				str_result_right = str_result_right.split("\"")[1];
+			}
+			double temp;
+			boolean temp1;
 			switch (operation) {
 			case "+":
-				double temp = Double.parseDouble(str_result_left) + Double.parseDouble(str_result_right);
+				temp = Double.parseDouble(str_result_left) + Double.parseDouble(str_result_right);
+				return Double.toString(temp);
+			case "-":
+				temp = Double.parseDouble(str_result_left) - Double.parseDouble(str_result_right);
 				return Double.toString(temp);
 			case ">":
-				boolean temp1 = (Double.parseDouble(str_result_left)>Double.parseDouble(str_result_right));
+				temp1 = (Double.parseDouble(str_result_left)>Double.parseDouble(str_result_right));
+				return String.valueOf(temp1);
+			case "=":
+				temp1 = (Double.parseDouble(str_result_left)==Double.parseDouble(str_result_right));
+				return String.valueOf(temp1);
+			case "<":
+				temp1 = (Double.parseDouble(str_result_left)<Double.parseDouble(str_result_right));
 				return String.valueOf(temp1);
 
 			default:
@@ -561,8 +597,14 @@ public class SpatialSelect implements SpatialSelectImpl{
 				
 			}else {
 				//类型为数值、字符串,均返回字符串类型
-				
+				//类型也有可能是iri的变量
+				//则根据index进行取值，返回读取到的结果
+				if(expression.getChild(0).getText().startsWith("?")){
+
+					return find_i_iri(expression.getChild(0).getText());
+				}
 				return expression.getChild(0).getText();
+//				return "17";
 			}
 		}
 		
@@ -638,10 +680,7 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 根据传入的参数来判断三元组属于哪一种类型
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#juge_triple_condition(java.util.Map)
-	 */
-	@Override
+	
 	public int juge_triple_condition(Map<String, String> paramMap){
 		
 		//1:待求变量 2：已知变量 3：值
@@ -653,11 +692,12 @@ public class SpatialSelect implements SpatialSelectImpl{
 		
 		//得到第一个元素的类型
 		if(var1.charAt(0)=='?'){//说明一定是变量，待求变量或者已知变量
-			
-			if(GetValue(var1)!=null){
+//			System.out.print("!"+var1+String.valueOf(GetSelect(var1)));
+			if(GetValue(var1)!=null||GetSelect(var1)){
+				
 				//从Vars中寻找，若没有找到说明一定是待求变量，否则为已知变量
 				type1 = 2;
-			}else{
+			}else {
 				type1 = 1;
 			}
 		}else{
@@ -666,7 +706,8 @@ public class SpatialSelect implements SpatialSelectImpl{
 		
 		//得到第一个元素的类型
 		if(var2.charAt(0)=='?'){//说明一定是变量，待求变量或者已知变量
-			if(GetValue(var2)!=null){
+//			System.out.print("!"+var1+String.valueOf(GetSelect(var2)));
+			if(GetValue(var2)!=null||GetSelect(var2)){
 				//从Vars中寻找，若没有找到说明一定是待求变量，否则为已知变量
 				type2 = 2;
 			}
@@ -704,15 +745,13 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 进行整个filter解算的函数
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#filter_excute(org.lmars.sparql.parser.SparqlParser.FilterContext)
-	 */
-	@Override
+	
 	public void filter_excute(SparqlParser.FilterContext ctx) {
 
 		index = new int[this.FilterVars.size()];
 		//现在FilterVar储存约束需要的变量，那么根据其个数判断需要多少成for循环
 		filter_loop(this.FilterVars.size()-1,ctx);
+		
 		//最终根据IndexSet对Vars中的变量进行约束
 		//首先对FilterVars的变量约束，之后再用FilterVars对Vars进行覆盖
 		for (int i = 0; i < FilterVars.size(); i++) {
@@ -756,6 +795,7 @@ public class SpatialSelect implements SpatialSelectImpl{
 				if(ctx.constraint().expression()!=null){
 					//操作符约束，调用excute_tree_exper
 					filterResult = Boolean.parseBoolean(filter_excute_exper(ctx.constraint().expression()));
+//					System.out.print(filterResult);
 				}else if(ctx.constraint().functionList() != null){
 		
 					//函数约束
@@ -775,8 +815,14 @@ public class SpatialSelect implements SpatialSelectImpl{
 				}
 				//if（满足约束条件）保存当前的index IndexSet.add(index);
 				if(filterResult){
-					IndexSet.add(index);
+					int[] temp = new int[index.length];
+					for(int j = 0;j<temp.length;j++){
+						temp[j] = index[j];
+					}
+					IndexSet.add(temp);					
 				}
+				Iterator iterator1 = this.IndexSet.iterator();//对满足条件的index遍历
+
 			}
 
 				
@@ -784,6 +830,7 @@ public class SpatialSelect implements SpatialSelectImpl{
 				
 			
 		}
+		
 		return;
 
 	}
@@ -792,18 +839,16 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 添加Vars变量的函数 判断重复性
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#AddVars(java.lang.String, org.lmars.panmap.parser.Variable)
-	 */
-	@Override
+	
 	public void AddVars(String name,Variable var){
 		Iterator iterator = this.Vars.iterator();
 		while(iterator.hasNext()){
 			Variable variable = (Variable) iterator.next();
-			if(variable.varMap.get(name)!=null)
+			if(variable.varMap.get(name)!=null||GetSelect(name))
 				return;
 		}
 		this.Vars.add(var);
+
 		
 	}
 	
@@ -811,20 +856,19 @@ public class SpatialSelect implements SpatialSelectImpl{
 	/*
 	 * 添加Vars变量的函数 判断重复性
 	 */
-	/* (non-Javadoc)
-	 * @see org.lmars.panmap.parser.SpatialSelectImpl#AddFikterVars(java.lang.String, org.lmars.panmap.parser.Variable)
-	 */
-	@Override
+	
 	public void AddFikterVars(String name,Variable var){
 		Iterator iterator = this.FilterVars.iterator();
 		while(iterator.hasNext()){
 			Variable variable = (Variable) iterator.next();
-			if(variable.varMap.get(name)!=null)
+			if(variable.varMap.get(name)!=null||GetSelect(name))
 				return;
 		}
 		this.FilterVars.add(var);
 	}
 	
+	
+
 	
 	/*
 	 * 找到在计算约束时，当前循环下，名称为name的变量在第index位置的iri，index即为循环下的值
@@ -889,5 +933,98 @@ public class SpatialSelect implements SpatialSelectImpl{
 		return null;
 	}
 
+	
+	/*
+	 * 执行完一条filter语句后执行此函数，对三元组进行回溯查询执行
+	 */
 
+	public void tirple_excute_racall() {
+		// TODO Auto-generated method stub
+		int size = this.Triples.size();
+		for (int i = size-1; i>=0; i--) {
+			if(Triples.get(i).tripleMap.get("Subject").startsWith("?")&&Triples.get(i).tripleMap.get("Object").startsWith("?")){
+				//判断若主语在FilterVars中出现过且宾语没有在Filter中出现,则调用类型3
+				if(GetFilterValue(Triples.get(i).tripleMap.get("Subject"))!=null&&GetFilterValue(Triples.get(i).tripleMap.get("Object"))==null){
+					
+					triple_execute_rule3(Triples.get(i).tripleMap);
+					//将主语当做已知，宾语当做待求
+					//最后还要把求出来的变量放入FilterVars
+					AddFikterVars(Triples.get(i).tripleMap.get("Object"), GetVarsVar(Triples.get(i).tripleMap.get("Object")));
+					
+				}else if(GetFilterValue(Triples.get(i).tripleMap.get("Subject"))==null&&GetFilterValue(Triples.get(i).tripleMap.get("Object"))!=null){//判断若主语没有在FilterVars中出现过且宾语在Filter中出现,则调用类型2
+					triple_execute_rule2(Triples.get(i).tripleMap);
+					//将主语当做待求，宾语当做已知
+					//最后还要把求出来的变量放入FilterVars
+					AddFikterVars(Triples.get(i).tripleMap.get("Subject"), GetVarsVar(Triples.get(i).tripleMap.get("Subject")));
+					
+				}else{
+					
+					continue;//否则继续下一个循环
+				}
+			}
+			
+			
+			
+		}
+		
+	}
+
+
+	public void triple_excute(Map<String, String> paramMap) {
+		// TODO Auto-generated method stub
+		//调用函数判断三元组语法的规则
+		
+				//根据不同的语法规则
+				int type = juge_triple_condition(paramMap);
+				switch (type) {
+				case 1:
+					triple_execute_rule1(paramMap);
+					break;
+				case 2:
+					triple_execute_rule2(paramMap);
+					break;
+				case 3:
+					triple_execute_rule3(paramMap);
+					break;
+				case 4:
+					triple_execute_rule4(paramMap);
+					break;
+				case 5:
+					triple_execute_rule5(paramMap);
+					break;
+				case 6:
+					//抛出异常
+					System.out.print("unknown condition");
+					break;
+				case 7:
+					//抛出异常
+					System.out.print("unknown condition");
+					break;
+				case 8:
+					//抛出异常
+					System.out.print("unknown condition");
+					break;
+				case 9:
+					//抛出异常
+					System.out.print("unknown condition");
+					break;
+				default:
+					break;
+				}
+	}
+
+
+	/*
+	 * 根据名称返回Variable类型的变量
+	 */
+	public Variable GetVarsVar(String name){
+		Iterator<Variable> iterator = Vars.iterator();
+		while(iterator.hasNext()){
+			Variable variable = iterator.next();
+			if(variable.varMap.get(name)!=null||GetSelect(name)){
+				return variable;
+			}
+		}
+		return null;
+	}
 }
