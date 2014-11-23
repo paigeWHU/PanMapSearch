@@ -182,7 +182,6 @@ public class SpatialSelect {
 			Variable variable = iterator.next();
 			
 			if(variable.IsSelect){
-//				System.out.print(variable.VarName()+variable.IsSelect);
 				return GetValue(variable.NameString);								
 			}			
 		}
@@ -348,11 +347,8 @@ public class SpatialSelect {
 //					throw new NoPropertyException("实例"+string+"不存在"+propertyString+"属性！");
 				
 				}
-//				System.out.print(String.valueOf(string)+","+String.valueOf(objectSet));
-				
-//					System.out.print(String.valueOf(string)+","+String.valueOf(String.valueOf(setResult))+","+String.valueOf(objectSet)+"\n");
+
 					if(SetContains(objectSet, setResult)){
-//						System.out.print(string+"\n");
 						var1Iri.add(string);
 					}
 				
@@ -795,7 +791,6 @@ public class SpatialSelect {
 		
 		//得到第一个元素的类型
 		if(var1.charAt(0)=='?'){//说明一定是变量，待求变量或者已知变量
-//			System.out.print("!"+var1+String.valueOf(GetSelect(var1)));
 			if(GetValue(var1)!=null||GetSelect(var1)){
 				
 				//从Vars中寻找，若没有找到说明一定是待求变量，否则为已知变量
@@ -809,7 +804,6 @@ public class SpatialSelect {
 		
 		//得到第一个元素的类型
 		if(var2.charAt(0)=='?'){//说明一定是变量，待求变量或者已知变量
-//			System.out.print("!"+var1+String.valueOf(GetSelect(var2)));
 			if(GetValue(var2)!=null||GetSelect(var2)){
 				//从Vars中寻找，若没有找到说明一定是待求变量，否则为已知变量
 				type2 = 2;
@@ -853,13 +847,11 @@ public class SpatialSelect {
 
 		index = new int[this.FilterVars.size()];
 		//现在FilterVar储存约束需要的变量，那么根据其个数判断需要多少成for循环
-//		try {
+
 			filter_loop(this.FilterVars.size()-1,ctx);
 			filter_excute_update();
-//		} catch (VarNotDefineException e) {
-			// TODO: handle exception
-//			System.err.print(ctx.getText()+" : "+e.getMessage());
-//		}
+
+
 		
 		
 		
@@ -922,7 +914,6 @@ public class SpatialSelect {
 					if(ctx.constraint().expression()!=null){
 						//操作符约束，调用excute_tree_exper
 						filterResult = Boolean.parseBoolean(filter_excute_exper(ctx.constraint().expression()));
-//						System.out.print(filterResult);
 					}else if(ctx.constraint().functionList() != null){
 			
 						//函数约束
@@ -1092,10 +1083,10 @@ public class SpatialSelect {
 					}
 				}
 			} catch (OntoNotDefineExcetion e) {
-//				System.err.print("\""+ctx.getText()+"\""+" : "+e.getMessage()+"\n");
+
 				// TODO: handle exception
 			} catch (NoPropertyException e) {
-//				System.err.print("\""+ctx.getText()+"\""+" : "+e.getMessage()+"\n");
+
 				// TODO: handle exception
 			}
 			

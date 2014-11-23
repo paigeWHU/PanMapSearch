@@ -103,7 +103,7 @@ public class GrammarParser extends SparqlBaseListener{
 			Variable variable = new Variable(ctx.selectVariables(i).getText(),varmap);
 			spatialSelect.AddVars(ctx.selectVariables(i).getText(), variable);
 			spatialSelect.SetSelect(ctx.selectVariables(i).getText());
-//			System.out.println("@#@#@#"+ctx.selectVariables(i).getText());//宏定义的值
+
 			//将变量存储到Vars数组
 		}
 		
