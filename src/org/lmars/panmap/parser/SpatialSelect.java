@@ -297,6 +297,7 @@ public class SpatialSelect {
 		Set<String> var1Iri = new HashSet<String>();
 		//首先得到已知变量的Set<String>
 		Set<String> objectSet = this.GetValue(objectString);
+		
 		//当objectSet为空将objectSet赋值为owl本体全部的实例
 		boolean isObjNull = false;
 		if (objectSet==null&&GetSelect(objectString)) {
@@ -322,6 +323,7 @@ public class SpatialSelect {
 		if(GetValue(subjectString)!=null){
 			
 			tempIri = GetValue(subjectString);
+			
 		}else {
 			tempIri = instance.readAllInstancesOfClass(subIriString);
 		}
@@ -346,21 +348,14 @@ public class SpatialSelect {
 //					throw new NoPropertyException("实例"+string+"不存在"+propertyString+"属性！");
 				
 				}
-			
-				if(!isObjNull){
-					
-					if(objectSet.equals(setResult)||objectSet.contains(setResult)){
-						var1Iri.add(string);
-				}
+//				System.out.print(String.valueOf(string)+","+String.valueOf(objectSet));
 				
-				}else {
-					
-					if(objectSet.contains(setResult)){
-						
+//					System.out.print(String.valueOf(string)+","+String.valueOf(String.valueOf(setResult))+","+String.valueOf(objectSet)+"\n");
+					if(SetContains(objectSet, setResult)){
+//						System.out.print(string+"\n");
 						var1Iri.add(string);
-						
 					}
-				}
+				
 				
 			}
 			
@@ -461,6 +456,8 @@ public class SpatialSelect {
 		//最终求出待求变量，并将其保存
 		this.AddVars(objectString, var1);
 		this.SetValue(objectString, var1Iri);
+		
+		
 
 		
 		
@@ -992,7 +989,7 @@ public class SpatialSelect {
 		Iterator iterator = this.FilterVars.iterator();
 		while(iterator.hasNext()){
 			Variable variable = (Variable) iterator.next();
-			if(variable.varMap.get(name)!=null||GetSelect(name))
+			if(variable.NameString.equals(name))
 				return;
 		}
 		this.FilterVars.add(var);
@@ -1159,5 +1156,23 @@ public class SpatialSelect {
 			}
 		}
 		return null;
+	}
+	
+	
+	/*
+	 * 判断两个set之间是否有包含关系
+	 */
+	private boolean SetContains(Set<String>set1,Set<String>set2) {
+		Iterator<String> iterator = set2.iterator();
+		while (iterator.hasNext()) {
+			String string = (String) iterator.next();
+			if (set1.contains(string)) {
+				continue;
+				
+			}else {
+				return false;
+			}
+		}
+		return true;
 	}
 }

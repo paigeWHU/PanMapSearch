@@ -213,9 +213,11 @@ public class GrammarParser extends SparqlBaseListener{
 	//	Iterator<Variable> iterator = spatialSelect.Vars.iterator();
 		
 		try {
+			
 			spatialSelect.filter_excute(ctx);//这里也要捕捉异常
 			
 			spatialSelect.tirple_excute_racall();
+		
 		} catch (VarNotDefineException e) {
 			// TODO: handle exception
 			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage());

@@ -1,6 +1,8 @@
 package org.lmars.panmap.parser;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -9,7 +11,19 @@ import org.lmars.panmap.exception.NoPropertyException;
 public class Test {
 
 	public static void main(String[] args) throws Exception {
+		Set<String> set = new HashSet<String>();
+		set.add("<http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205>");
+		set.add("<http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101>");
 		
+		Set<String> set2 = new HashSet<String>();
+		set2.add("<http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205>");
+		set2.add("<http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101>");
+		Test test = new Test();
+//	
+//		if (test.SetContains(set2, set)) {
+//			System.out.print("hahah");
+//		}
+//		
 //		try {
 //			Test test = new Test();
 //			test.teset1();
@@ -49,7 +63,7 @@ public class Test {
 				+ "Select ?TeacherX "
 				+ "Where"
 				+ "{"
-				+ "?Teacher_Zhu Teacher:Name \"朱欣焰\" ."
+				+ "?Teacher_Zhu Teacher:Name \"呙维\" ."
 				+ "?Teacher_Zhu  Teacher:Has_Office ?Room_Zhu ."
 				+ "?TeacherX   Teacher:Has_Office ?Room_X ."
 				+ "FILTER (Opposite(?Room_X,?Room_Zhu)) ."
@@ -57,11 +71,11 @@ public class Test {
 				,
 				//查询朱老师的所有学生
 				"PREFIX Teacher: <http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#Teacher>"
-				+ "Select ?Teacher_Zhu "
+				+ "Select ?Student_Zhu "
 				+ "Where"
 				+ "{"
 				+ "?Teacher_Zhu Teacher:Name \"呙维\" ."
-//				+ "?Teacher_Zhu  Teacher:Teach ?Student_Zhu ."
+				+ "?Teacher_Zhu  Teacher:Teach ?Student_Zhu ."
 				
 				+ "}"
 				,
@@ -121,6 +135,19 @@ public class Test {
 				
 			}
 		}
+	}
+	private boolean SetContains(Set<String>set1,Set<String>set2) {
+		Iterator<String> iterator = set2.iterator();
+		while (iterator.hasNext()) {
+			String string = (String) iterator.next();
+			if (set1.contains(string)) {
+				continue;
+				
+			}else {
+				return false;
+			}
+		}
+		return true;
 	}
 
 }
