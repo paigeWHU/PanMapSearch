@@ -57,11 +57,11 @@ public class Test {
 				,
 				//查询朱老师的所有学生
 				"PREFIX Teacher: <http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#Teacher>"
-				+ "Select ?Student_Zhu "
+				+ "Select ?Teacher_Zhu "
 				+ "Where"
 				+ "{"
-				+ "?Teacher_Zhu Teacher:Name \"朱欣焰\" ."
-				+ "?Teacher_Zhu  Teacher:Teach ?Student_Zhu ."
+				+ "?Teacher_Zhu Teacher:Name \"呙维\" ."
+//				+ "?Teacher_Zhu  Teacher:Teach ?Student_Zhu ."
 				
 				+ "}"
 				,
@@ -70,7 +70,7 @@ public class Test {
 						+ "Select ?room "
 						+ "Where"
 						+ "{"
-						+ "?Teacher Teacher:Name \"朱欣焰\" ."
+						+ "?Teacher Teacher:Name \"呙维\" ."
 						+ "?Teacher Teacher:Has_Office ?room ."											
 						+ "}"
 				,

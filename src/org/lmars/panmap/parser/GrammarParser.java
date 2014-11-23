@@ -78,7 +78,7 @@ public class GrammarParser extends SparqlBaseListener{
 		set.add(ctx.IRIREF().getText());
 		Map<String,Set<String>> varmap = new HashMap<String,Set<String>>();
 		varmap.put(ctx.PNAME_NS().getText().split(":")[0], set);
-		Variable variable = new Variable(varmap);
+		Variable variable = new Variable(ctx.PNAME_NS().getText().split(":")[0],varmap);
 		spatialSelect.AddVars(ctx.PNAME_NS().getText().split(":")[0], variable);
 		
 		
@@ -100,7 +100,7 @@ public class GrammarParser extends SparqlBaseListener{
 //			Set<String> set = new HashSet<String>();		
 			Map<String,Set<String>> varmap = new HashMap<String,Set<String>>();
 			varmap.put(ctx.selectVariables(i).getText(), null);
-			Variable variable = new Variable(varmap);
+			Variable variable = new Variable(ctx.selectVariables(i).getText(),varmap);
 			spatialSelect.AddVars(ctx.selectVariables(i).getText(), variable);
 			spatialSelect.SetSelect(ctx.selectVariables(i).getText());
 //			System.out.println("@#@#@#"+ctx.selectVariables(i).getText());//宏定义的值
@@ -178,6 +178,7 @@ public class GrammarParser extends SparqlBaseListener{
 		paramMap.put("Prefix",prefixString);
 		paramMap.put("Property", propertyString);
 		paramMap.put("Object", objectString);
+		
 		//添加进三元组数组
 		Triple triple = new Triple(paramMap);
 		spatialSelect.Triples.add(triple);

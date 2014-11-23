@@ -76,7 +76,7 @@ public class SpatialSelect {
 	 * @see org.lmars.panmap.parser.SpatialSelectImpl#SetValue(java.lang.String, java.util.Set)
 	 */
 	public void SetValue(String name,Set<String> iris) {
-		String[] str = new String[0];
+		
 		GetVarsVar(name).varMap.put(name, iris);		
 	}
 	
@@ -139,7 +139,7 @@ public class SpatialSelect {
 		while (iterator.hasNext()) {
 			Variable variable = iterator.next();
 //			
-			if(variable.VarName().equals(name)){
+			if(variable.NameString.equals(name)){
 //			
 				variable.IsSelect = true;
 			}
@@ -160,7 +160,7 @@ public class SpatialSelect {
 		Iterator<Variable> iterator = this.Vars.iterator();
 		while (iterator.hasNext()) {
 			Variable variable = iterator.next();
-			if(variable.VarName().equals(name)){
+			if(variable.NameString.equals(name)){
 				return variable.IsSelect;
 			}
 			
@@ -183,7 +183,7 @@ public class SpatialSelect {
 			
 			if(variable.IsSelect){
 //				System.out.print(variable.VarName()+variable.IsSelect);
-				return GetValue(variable.VarName());								
+				return GetValue(variable.NameString);								
 			}			
 		}
 		return null;
@@ -193,9 +193,9 @@ public class SpatialSelect {
 	 * 执行第一种语法规则的三元组查询函数:1、	待求变量+属性+值
 	 */
 	
-	@SuppressWarnings("finally")
+	
 	private void triple_execute_rule1 (Map<String ,String>args) throws OntoNotDefineExcetion,NoPropertyException{
-
+		
 		String subjectString = args.get("Subject");
 		String prifixString = args.get("Prefix");
 		String propertyString = args.get("Property");
@@ -220,7 +220,9 @@ public class SpatialSelect {
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
 		boolean IsDataPro = instance.readExistDataProperty(pvIri);
 		boolean IsObjectPro = instance.readExistObjectProperty(pvIri);
+		
 		if(!IsObjectPro&&!IsDataPro){
+			
 			throw new NoPropertyException("实例"+subjectString+"不存在"+propertyString+"属性！");
 		}
 		
@@ -231,6 +233,7 @@ public class SpatialSelect {
 		}else {
 			tempIri = instance.readAllInstancesOfClass(subIriString);
 		}
+		
 		try {
 			//遍历tempIri 看实例的property属性是否为值 是的话加入到var1Iri
 			Iterator<String> iterator = tempIri.iterator();
@@ -270,10 +273,11 @@ public class SpatialSelect {
 			throw new OntoNotDefineExcetion("本体"+prifixString+"定义错误或者主语变量"+subjectString+"错误！");
 		}
 		
+		
 		//添加变量到Vars						
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
 		var1Map.put(subjectString, var1Iri);
-		Variable var1 = new Variable(var1Map);
+		Variable var1 = new Variable(subjectString,var1Map);
 		//最终求出待求变量，并将其保存
 		this.AddVars(subjectString, var1);
 		this.SetValue(subjectString, var1Iri);
@@ -367,7 +371,7 @@ public class SpatialSelect {
 		
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
 		var1Map.put(subjectString, var1Iri);
-		Variable var1 = new Variable(var1Map);
+		Variable var1 = new Variable(subjectString,var1Map);
 		//最终求出待求变量，并将其保存
 		this.AddVars(subjectString, var1);
 	
@@ -453,7 +457,7 @@ public class SpatialSelect {
 		
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
 		var1Map.put(objectString, var1Iri);		
-		Variable var1 = new Variable(var1Map);				
+		Variable var1 = new Variable(objectString,var1Map);				
 		//最终求出待求变量，并将其保存
 		this.AddVars(objectString, var1);
 		this.SetValue(objectString, var1Iri);
@@ -508,6 +512,7 @@ public class SpatialSelect {
 			SetValue(subjectString, subIri);
 			
 		}
+		
 		//遍历subIri 看实例的property属性是否为值 是的话加入到var1Iri
 		try {
 			Iterator<String> iterator = subIri.iterator();
@@ -516,11 +521,14 @@ public class SpatialSelect {
 				//看实例的property属性是否为值 是的话加入到var1Iri
 				 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
 				 if (setResult.size()==0) {
+					
 					 setResult = null;
 				}
+				 
 				 //得到结果组成的字符串
 				 String resultString = "";
 				 try {
+					
 					  Iterator iteratorResult = setResult.iterator();
 					    while (iteratorResult.hasNext()) {
 							String tempString = (String) iteratorResult.next();
@@ -529,16 +537,15 @@ public class SpatialSelect {
 								resultString += ",";
 							}
 					    }
-					
+					   
 						if(resultString.equals(objectString)){
+							
 							var1Iri.add(string);
 						}
 				} catch (NullPointerException e) {
 					// TODO: handle exception
 					continue;
 //					throw new NoPropertyException("实例"+string+"不存在"+propertyString+"属性！");
-				}finally{
-					continue;
 				}
 				  
 			}
@@ -968,7 +975,7 @@ public class SpatialSelect {
 		Iterator iterator = this.Vars.iterator();
 		while(iterator.hasNext()){
 			Variable variable = (Variable) iterator.next();
-			if(variable.varMap.get(name)!=null||GetSelect(name))
+			if(variable.NameString.equals(name))
 				return;
 		}
 		this.Vars.add(var);
@@ -1109,6 +1116,7 @@ public class SpatialSelect {
 		
 				//根据不同的语法规则
 				int type = judge_triple_condition(paramMap);
+			
 				switch (type) {
 				case 1:
 					triple_execute_rule1(paramMap);
@@ -1146,7 +1154,7 @@ public class SpatialSelect {
 		Iterator<Variable> iterator = Vars.iterator();
 		while(iterator.hasNext()){
 			Variable variable = iterator.next();
-			if(variable.varMap.get(name)!=null||GetSelect(name)){
+			if(variable.NameString.equals(name)){
 				return variable;
 			}
 		}
