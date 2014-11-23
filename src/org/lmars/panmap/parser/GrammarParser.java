@@ -9,6 +9,10 @@ import org.antlr.runtime.tree.BaseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.tool.Rule;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.lmars.panmap.exception.NoPropertyException;
+import org.lmars.panmap.exception.OntoNotDefineExcetion;
+import org.lmars.panmap.exception.UnkownTripleTypeException;
+import org.lmars.panmap.exception.VarNotDefineException;
 import org.lmars.sparql.parser.SparqlParser.QueryContext;
 import org.owlapi.OWL;
 
@@ -52,11 +56,16 @@ public class GrammarParser extends SparqlBaseListener{
 
 
 		Set<String> setResulteSet =  spatialSelect.SelectResult();
-		
-		Iterator<String> iterator = setResulteSet.iterator();
-		while (iterator.hasNext()) {			
-			System.out.println(iterator.next());
+		try {
+			Iterator<String> iterator = setResulteSet.iterator();
+			while (iterator.hasNext()) {			
+				System.out.println(iterator.next());
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			System.err.print("被查询的变量没有定义！\n");
 		}
+		
 
 	}
 	
@@ -173,7 +182,19 @@ public class GrammarParser extends SparqlBaseListener{
 		Triple triple = new Triple(paramMap);
 		spatialSelect.Triples.add(triple);
 		//调用总的三元组执行函数
-		spatialSelect.triple_excute(paramMap);	
+		try {
+			spatialSelect.triple_excute(paramMap);	//应当在这里捕捉异常
+		} catch (UnkownTripleTypeException e) {
+			// TODO: handle exception
+			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
+		} catch (OntoNotDefineExcetion e) {
+			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
+			// TODO: handle exception
+		} catch (NoPropertyException e) {
+			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
+			// TODO: handle exception
+		}
+		
 		
 	
 	}
@@ -190,10 +211,16 @@ public class GrammarParser extends SparqlBaseListener{
 		grammerString = "NoFilter";//从filter的语法出去
 	//	Iterator<Variable> iterator = spatialSelect.Vars.iterator();
 		
+		try {
+			spatialSelect.filter_excute(ctx);//这里也要捕捉异常
+			
+			spatialSelect.tirple_excute_racall();
+		} catch (VarNotDefineException e) {
+			// TODO: handle exception
+			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage());
+		}
 		
-		spatialSelect.filter_excute(ctx);
-		//从新回溯调用三元组 更新所有变量
-		spatialSelect.tirple_excute_racall();
+		
 	}
 	
 	

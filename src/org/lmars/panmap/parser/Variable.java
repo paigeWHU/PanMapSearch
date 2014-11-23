@@ -68,6 +68,7 @@ public class Variable {
 	public void SetIndex(int index){
 		this.value_filter_index = index;
 	}
+	
 	public Map<String, Set<String>> varMap;//map的key值为变量的名称，value是iri字符串的集合
 	public Boolean IsSelect;//说明一个变量是否为最终查询需要返回的变量
 	public int     value_filter_index;//保存变量当前的index值

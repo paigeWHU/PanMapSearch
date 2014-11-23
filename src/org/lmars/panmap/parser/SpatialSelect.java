@@ -2,6 +2,7 @@ package org.lmars.panmap.parser;
 import org.lmars.sparql.parser.*;
 import org.antlr.v4.codegen.model.chunk.ThisRulePropertyRef_ctx;
 import org.antlr.v4.parse.ANTLRParser.id_return;
+import org.antlr.v4.parse.ANTLRParser.throwsSpec_return;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -18,6 +19,7 @@ import java.util.regex.Pattern;
 
 import org.owlapi.OWL;
 import org.stringtemplate.v4.compiler.CodeGenerator.region_return;  
+import org.lmars.panmap.exception.*;
 public class SpatialSelect {
 	
 	/*
@@ -82,16 +84,21 @@ public class SpatialSelect {
 	/* (non-Javadoc)
 	 * @see org.lmars.panmap.parser.SpatialSelectImpl#GetFilterValue(java.lang.String)
 	 */
-	public Set<String> GetFilterValue(String name) {
+	public Set<String> GetFilterValue(String name) throws VarNotDefineException{
 		
 //		String[] str = new String[0];
 		Iterator<Variable> iterator = this.FilterVars.iterator();
 		while (iterator.hasNext()) {
 			Variable variable = iterator.next();
-			
-			if(variable.varMap.get(name) != null){
-				return variable.varMap.get(name);
+			try {
+				if(variable.varMap.get(name) != null){
+					return variable.varMap.get(name);
+				}
+			} catch (NullPointerException e) {
+				// TODO: handle exception
+				throw  new VarNotDefineException("存在未定义变量！"+"\n");
 			}
+			
 			
 		}
 		return null;
@@ -186,7 +193,8 @@ public class SpatialSelect {
 	 * 执行第一种语法规则的三元组查询函数:1、	待求变量+属性+值
 	 */
 	
-	private void triple_execute_rule1 (Map<String ,String>args){
+	@SuppressWarnings("finally")
+	private void triple_execute_rule1 (Map<String ,String>args) throws OntoNotDefineExcetion,NoPropertyException{
 
 		String subjectString = args.get("Subject");
 		String prifixString = args.get("Prefix");
@@ -197,39 +205,71 @@ public class SpatialSelect {
 		//得到主体的iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
-		Iterator<String> it = set.iterator();
-		while (it.hasNext()) {
-			subIriString = it.next();
-			
+		try {
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				subIriString = it.next();
+				
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("本体"+prifixString+"未定义！");
 		}
+		
 		//得到属性的iri
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
-		//读书本体的所有实例赋值给tempIri		
-		tempIri = instance.readAllInstancesOfClass(subIriString);
-		
-		//遍历tempIri 看实例的property属性是否为值 是的话加入到var1Iri
-		Iterator<String> iterator = tempIri.iterator();
-		while(iterator.hasNext()){
-			
-			String string = iterator.next();
-			
-			//看实例的property属性是否为值 是的话加入到var1Iri
-			 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
-			 //得到结果组成的字符串
-			 String resultString = "";
-			    Iterator iteratorResult = setResult.iterator();
-			    while (iteratorResult.hasNext()) {
-					String tempString = (String) iteratorResult.next();
-					resultString = resultString + tempString;
-					if (iteratorResult.hasNext()) {
-						resultString += ",";
-					}
-			    }
-			
-				if(resultString.equals(objectString)){
-					var1Iri.add(string);
-				}
+		boolean IsDataPro = instance.readExistDataProperty(pvIri);
+		boolean IsObjectPro = instance.readExistObjectProperty(pvIri);
+		if(!IsObjectPro&&!IsDataPro){
+			throw new NoPropertyException("实例"+subjectString+"不存在"+propertyString+"属性！");
 		}
+		
+		//读出本体的所有实例赋值给tempIri		
+		if(GetValue(subjectString)!=null){
+			
+			tempIri = GetValue(subjectString);
+		}else {
+			tempIri = instance.readAllInstancesOfClass(subIriString);
+		}
+		try {
+			//遍历tempIri 看实例的property属性是否为值 是的话加入到var1Iri
+			Iterator<String> iterator = tempIri.iterator();
+			while(iterator.hasNext()){
+				
+				String string = iterator.next();
+				
+				//看实例的property属性是否为值 是的话加入到var1Iri
+				 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+				 if (setResult.size()==0) {
+					 setResult = null;
+				}
+				 //得到结果组成的字符串
+				 String resultString = "";
+				 try {
+					 Iterator iteratorResult = setResult.iterator();
+					    while (iteratorResult.hasNext()) {
+							String tempString = (String) iteratorResult.next();
+							resultString = resultString + tempString;
+							if (iteratorResult.hasNext()) {
+								resultString += ",";
+							}
+					    }
+					
+						if(resultString.equals(objectString)){
+							var1Iri.add(string);
+						}
+				} catch (NullPointerException e) {
+					continue;
+					// TODO: handle exception
+//					throw new NoPropertyException("实例"+string+"不存在"+propertyString+"属性！");
+				}
+				   
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("本体"+prifixString+"定义错误或者主语变量"+subjectString+"错误！");
+		}
+		
 		//添加变量到Vars						
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
 		var1Map.put(subjectString, var1Iri);
@@ -244,7 +284,7 @@ public class SpatialSelect {
 	 * 执行第一种语法规则的三元组查询函数:2、	待求变量+属性+已知变量
 	 */
 	
-	private void triple_execute_rule2 (Map<String ,String>args){
+	private void triple_execute_rule2 (Map<String ,String>args) throws OntoNotDefineExcetion,NoPropertyException{
 		String subjectString = args.get("Subject");
 		String prifixString = args.get("Prefix");
 		String propertyString = args.get("Property");
@@ -256,7 +296,6 @@ public class SpatialSelect {
 		//当objectSet为空将objectSet赋值为owl本体全部的实例
 		boolean isObjNull = false;
 		if (objectSet==null&&GetSelect(objectString)) {
-			System.out.print("haha1");
 			isObjNull = true;//为空
 			objectSet = instance.readAllInstances();
 		}
@@ -264,11 +303,17 @@ public class SpatialSelect {
 		//得到本体的iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
-		Iterator<String> it = set.iterator();
-		while (it.hasNext()) {
-			subIriString = it.next();
-			
+		try {
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				subIriString = it.next();
+				
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("实例"+prifixString+"未定义！");
 		}
+		
 		//得到待求变量的过滤前的实例
 		if(GetValue(subjectString)!=null){
 			
@@ -280,29 +325,44 @@ public class SpatialSelect {
 		
 		//得到属性的iri
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
-		//遍历tempIri找到满足属性要求的实例
-		Iterator<String> iterator = tempIri.iterator();
+		boolean IsDataPro = instance.readExistDataProperty(pvIri);
+		boolean IsObjectPro = instance.readExistObjectProperty(pvIri);
+		if(!IsObjectPro&&!IsDataPro){
+			throw new NoPropertyException("实例"+subjectString+"不存在"+propertyString+"属性！");
+		}
+		try {
+			//遍历tempIri找到满足属性要求的实例
+			Iterator<String> iterator = tempIri.iterator();
 
-		while (objectSet.size()!=0&&iterator.hasNext()) {
-			String string = (String) iterator.next();//遍历实例
-			Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
-			
-			if(!isObjNull){
+			while (objectSet.size()!=0&&iterator.hasNext()) {
+				String string = (String) iterator.next();//遍历实例
+				Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+				if (setResult.size()==0) {
+					continue;
+//					throw new NoPropertyException("实例"+string+"不存在"+propertyString+"属性！");
 				
-				if(objectSet.equals(setResult)||objectSet.contains(setResult)){
-//					System.out.print(String.valueOf(objectSet.size())+"!"+String.valueOf(setResult.size())+"\n");
-					var1Iri.add(string);
-			}
-			
-			}else {
-				
-				if(objectSet.contains(setResult)){
-					
-					var1Iri.add(string);
-					
 				}
+			
+				if(!isObjNull){
+					
+					if(objectSet.equals(setResult)||objectSet.contains(setResult)){
+						var1Iri.add(string);
+				}
+				
+				}else {
+					
+					if(objectSet.contains(setResult)){
+						
+						var1Iri.add(string);
+						
+					}
+				}
+				
 			}
 			
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("本体"+prifixString+"定义错误或者主语变量"+subjectString+"错误！");
 		}
 		
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
@@ -320,7 +380,7 @@ public class SpatialSelect {
 	 * 行第一种语法规则的三元组查询函数:3、	已知变量+属性+待求变量
 	 */
 
-	private void triple_execute_rule3 (Map<String ,String>args){
+	private void triple_execute_rule3 (Map<String ,String>args) throws OntoNotDefineExcetion,NoPropertyException{
 
 		String subjectString = args.get("Subject");
 		String prifixString = args.get("Prefix");
@@ -331,11 +391,17 @@ public class SpatialSelect {
 		//得到本体的iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
-		Iterator<String> it = set.iterator();
-		while (it.hasNext()) {
-			subIriString = it.next();
-			
+		try {
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				subIriString = it.next();
+				
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("实例"+prifixString+"未定义！");
 		}
+		
 		Set<String> tempIri = new HashSet<String>();
 		if (subSet==null&&GetSelect(subjectString)) {
 			tempIri = instance.readAllInstancesOfClass(subIriString);
@@ -348,38 +414,46 @@ public class SpatialSelect {
 		
 		//得到属性iri
 		Set<String> var1Iri = new HashSet<String>();
+		
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
-		Iterator<String> it1 = subSet.iterator();
-		while (it1.hasNext()) {
-			String string = (String) it1.next();
-//			System.out.print("@"+string+"#"+"\n");
-			Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
-//			System.out.print("@"+String.valueOf(setResult)+"#"+"\n");
-			//将setResult整合成以逗号分隔的字符串
-		    String resultString = "";
-		    Iterator iterator = setResult.iterator();
-		    while (iterator.hasNext()) {
-		    	var1Iri.add((String)iterator.next());
-//				String tempString = (String) iterator.next();
-//				resultString = resultString + tempString;
-//				if (iterator.hasNext()) {
-//					resultString += ",";
-//				}
-			}
-//			if(setResult.size()!=0)
-//			var1Iri.add(resultString);
+		boolean IsDataPro = instance.readExistDataProperty(pvIri);
+		boolean IsObjectPro = instance.readExistObjectProperty(pvIri);
+		if(!IsObjectPro&&!IsDataPro){
+			throw new NoPropertyException("实例"+subjectString+"不存在"+propertyString+"属性！");
 		}
+		try {
+			Iterator<String> it1 = subSet.iterator();
+			while (it1.hasNext()) {
+				String string = (String) it1.next();
+				Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+
+				try {
+					 Iterator iterator = setResult.iterator();
+					    while (iterator.hasNext()) {
+					    	var1Iri.add((String)iterator.next());
+						}
+				} catch (NullPointerException e) {
+					// TODO: handle exception
+					continue;
+//					throw new NoPropertyException("实例"+string+"不存在"+propertyString+"属性！");
+				}finally{
+					continue;
+				}
+			   
+
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("本体"+prifixString+"定义错误或者主语变量"+subjectString+"错误！");
+		}
+		
 		
 	
 		
 		
 		Map<String, Set<String>> var1Map = new HashMap<String,Set<String>>();
-		var1Map.put(objectString, var1Iri);
-		
-		Variable var1 = new Variable(var1Map);
-		
-		
-		
+		var1Map.put(objectString, var1Iri);		
+		Variable var1 = new Variable(var1Map);				
 		//最终求出待求变量，并将其保存
 		this.AddVars(objectString, var1);
 		this.SetValue(objectString, var1Iri);
@@ -394,7 +468,7 @@ public class SpatialSelect {
 	 * 行第一种语法规则的三元组查询函数:4、	已知变量+属性+值
 	 */
 	
-	private void triple_execute_rule4(Map<String, String> args) {
+	private void triple_execute_rule4(Map<String, String> args) throws OntoNotDefineExcetion,NoPropertyException{
 		// TODO Auto-generated method stub
 		
 
@@ -404,17 +478,27 @@ public class SpatialSelect {
 		String objectString = args.get("Object");
 		Set<String> var1Iri = new HashSet<String>();
 		Set<String> subIri = new HashSet<String>();
-		//得到主体的iri
+		//得到本体iri
 		String subIriString = "";
 		Set<String> set =  this.GetValue(prifixString);
-		Iterator<String> it = set.iterator();
-		while (it.hasNext()) {
-			subIriString = it.next();
-			
+		try {
+			Iterator<String> it = set.iterator();
+			while (it.hasNext()) {
+				subIriString = it.next();
+				
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("实例"+prifixString+"未定义！");
 		}
+		
 		//得到属性的iri
 		String pvIri = subIriString.split("#")[0]+"#"+propertyString+">";
-		
+		boolean IsDataPro = instance.readExistDataProperty(pvIri);
+		boolean IsObjectPro = instance.readExistObjectProperty(pvIri);
+		if(!IsObjectPro&&!IsDataPro){
+			throw new NoPropertyException("实例"+subjectString+"不存在"+propertyString+"属性！");
+		}
 		//得到已知变量的值	
 		subIri = this.GetValue(subjectString);
 		if(subIri==null&&GetSelect(subjectString)){
@@ -425,28 +509,42 @@ public class SpatialSelect {
 			
 		}
 		//遍历subIri 看实例的property属性是否为值 是的话加入到var1Iri
-		Iterator<String> iterator = subIri.iterator();
-		while(iterator.hasNext()){
-			
-			String string = iterator.next();	
-//			 System.out.print(string);
-			//看实例的property属性是否为值 是的话加入到var1Iri
-			 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
-//			 System.out.print(setResult.size());
-			 //得到结果组成的字符串
-			 String resultString = "";
-			    Iterator iteratorResult = setResult.iterator();
-			    while (iteratorResult.hasNext()) {
-					String tempString = (String) iteratorResult.next();
-					resultString = resultString + tempString;
-					if (iteratorResult.hasNext()) {
-						resultString += ",";
-					}
-			    }
-			
-				if(resultString.equals(objectString)){
-					var1Iri.add(string);
+		try {
+			Iterator<String> iterator = subIri.iterator();
+			while(iterator.hasNext()){				
+				String string = iterator.next();	
+				//看实例的property属性是否为值 是的话加入到var1Iri
+				 Set<String> setResult = instance.readPropertyValueOfInstance(pvIri, string);
+				 if (setResult.size()==0) {
+					 setResult = null;
 				}
+				 //得到结果组成的字符串
+				 String resultString = "";
+				 try {
+					  Iterator iteratorResult = setResult.iterator();
+					    while (iteratorResult.hasNext()) {
+							String tempString = (String) iteratorResult.next();
+							resultString = resultString + tempString;
+							if (iteratorResult.hasNext()) {
+								resultString += ",";
+							}
+					    }
+					
+						if(resultString.equals(objectString)){
+							var1Iri.add(string);
+						}
+				} catch (NullPointerException e) {
+					// TODO: handle exception
+					continue;
+//					throw new NoPropertyException("实例"+string+"不存在"+propertyString+"属性！");
+				}finally{
+					continue;
+				}
+				  
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new OntoNotDefineExcetion("本体"+prifixString+"定义错误或者主语变量"+subjectString+"错误！");
 		}
 		
 		//更新已知变量的值
@@ -459,7 +557,7 @@ public class SpatialSelect {
 	 * 行第一种语法规则的三元组查询函数:5、	已知变量+属性+已知变量
 	 */
 	
-	private void triple_execute_rule5(Map<String, String> args) {
+	private void triple_execute_rule5(Map<String, String> args) throws OntoNotDefineExcetion,NoPropertyException, UnkownTripleTypeException{
 		// TODO Auto-generated method stub
 		
 		String subjectString = args.get("Subject");
@@ -479,7 +577,8 @@ public class SpatialSelect {
 			triple_execute_rule3(args);
 		}else {
 			//抛出异常
-			System.out.print("both the subject and the object are unknown");
+			throw new UnkownTripleTypeException("主语宾语均为已知，未知的三元组类型");
+		
 		}
 		
 	}
@@ -681,7 +780,7 @@ public class SpatialSelect {
 	 * 根据传入的参数来判断三元组属于哪一种类型
 	 */
 	
-	public int juge_triple_condition(Map<String, String> paramMap){
+	public int judge_triple_condition(Map<String, String> paramMap){
 		
 		//1:待求变量 2：已知变量 3：值
 		String var1 = paramMap.get("Subject");
@@ -746,90 +845,115 @@ public class SpatialSelect {
 	 * 进行整个filter解算的函数
 	 */
 	
-	public void filter_excute(SparqlParser.FilterContext ctx) {
+	public void filter_excute(SparqlParser.FilterContext ctx) throws VarNotDefineException{
 
 		index = new int[this.FilterVars.size()];
 		//现在FilterVar储存约束需要的变量，那么根据其个数判断需要多少成for循环
-		filter_loop(this.FilterVars.size()-1,ctx);
+//		try {
+			filter_loop(this.FilterVars.size()-1,ctx);
+			filter_excute_update();
+//		} catch (VarNotDefineException e) {
+			// TODO: handle exception
+//			System.err.print(ctx.getText()+" : "+e.getMessage());
+//		}
 		
-		//最终根据IndexSet对Vars中的变量进行约束
-		//首先对FilterVars的变量约束，之后再用FilterVars对Vars进行覆盖
-		for (int i = 0; i < FilterVars.size(); i++) {
-			String nameString = FilterVars.get(i).VarName();
-//			Map<String, Set<String>> varmap = new HashMap<String,Set<String>>();
-			Set<String> set = new HashSet<String>();//保存过滤后的iri
-			Iterator iterator = this.IndexSet.iterator();//对满足条件的index遍历
-			while(iterator.hasNext()){
-				int[] temp = (int[]) iterator.next();
-				set.add(FilterVars.get(i).IndexIri(temp[i])); 
-			}
-			SetValue(nameString, set);
-		}
+		
 		
 	}
+	
+	
+	/*
+	 * 执行完一个filter约束语句后对约束的变量进行更新到Vars变量中
+	 */
+	private void filter_excute_update() throws VarNotDefineException{
+
+		//最终根据IndexSet对Vars中的变量进行约束
+		//首先对FilterVars的变量约束，之后再用FilterVars对Vars进行覆盖
+
+		try {
+			for (int i = 0; i < FilterVars.size(); i++) {
+				String nameString = FilterVars.get(i).VarName();
+//				Map<String, Set<String>> varmap = new HashMap<String,Set<String>>();
+				Set<String> set = new HashSet<String>();//保存过滤后的iri
+				Iterator iterator = this.IndexSet.iterator();//对满足条件的index遍历
+				while(iterator.hasNext()){
+					int[] temp = (int[]) iterator.next();
+					set.add(FilterVars.get(i).IndexIri(temp[i])); 
+				}
+				SetValue(nameString, set);
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw  new VarNotDefineException("存在未定义变量！"+"\n");
+		}
+
+	}
+	
 	
 	/*
 	 * 现在FilterVar储存约束需要的变量，那么根据其个数判断需要多少成for循环
 	 */
-	private void filter_loop(int count,SparqlParser.FilterContext ctx){
-		for(int i = 0; i<this.FilterVars.get(count).IriLength();i++)
-		{
-			index[count] = i;
-			//应将index的属性保存造FilterVars中
-			this.FilterVars.get(count).SetIndex(i);
-			if(count != 0)
+	private void filter_loop(int count,SparqlParser.FilterContext ctx) throws VarNotDefineException{
+		try {
+			for(int i = 0; i<this.FilterVars.get(count).IriLength();i++)
 			{
-				int temp = count-1;
-				filter_loop(temp,ctx);
-			}
-			
-			if(count==0)//到最底层循环 可以调用查询函数了  得到当前Filter
-			{
+				index[count] = i;
+				//应将index的属性保存造FilterVars中
+				this.FilterVars.get(count).SetIndex(i);
+				if(count != 0)
+				{
+					int temp = count-1;
+					filter_loop(temp,ctx);
+				}
 				
-				
-				//在调用查询函数时根据index对每个变量进行取值
-				boolean filterResult = false;
-				//判断是函数约束还是操作符约束
-				//若为函数约束，则得到函数名，参数的值（通过index得到，应当只有一个实例），调用函数约束执行函数filter_execute_funcRule1得到true或者false来判断当前的index是否满足要求
-				//若为操作符约束，则直接调用excute_tree_exper函数得到true或者false来判断当前的index是否满足要求
-				if(ctx.constraint().expression()!=null){
-					//操作符约束，调用excute_tree_exper
-					filterResult = Boolean.parseBoolean(filter_excute_exper(ctx.constraint().expression()));
-//					System.out.print(filterResult);
-				}else if(ctx.constraint().functionList() != null){
-		
-					//函数约束
-					//得到函数的名称，得到参数的个数，得到参数的名称，然后调用相应的函数进行查询
-					Map<String,String> funcMap = new HashMap<String, String>();
-					//得到函数名称 只考虑一个函数名称
-					String funcnameString = ctx.constraint().functionList().function().get(0).ID().getText();
-					//得到参数个数
-					String paramscountString =Integer.toString(ctx.constraint().functionList().function().get(0).paramDeclList().expression().size());
-					//得到参数名称字符串
-					String paramsString = ctx.constraint().functionList().function().get(0).paramDeclList().getText();
-					funcMap.put("FuncName", funcnameString);
-					funcMap.put("ParamsCount", paramscountString);
-					funcMap.put("Params", paramsString);
-					filterResult = Boolean.parseBoolean(filter_excute_func(funcMap));
+				if(count==0)//到最底层循环 可以调用查询函数了  得到当前Filter
+				{
 					
-				}
-				//if（满足约束条件）保存当前的index IndexSet.add(index);
-				if(filterResult){
-					int[] temp = new int[index.length];
-					for(int j = 0;j<temp.length;j++){
-						temp[j] = index[j];
-					}
-					IndexSet.add(temp);					
-				}
-				Iterator iterator1 = this.IndexSet.iterator();//对满足条件的index遍历
-
-			}
-
-				
-
-				
+					
+					//在调用查询函数时根据index对每个变量进行取值
+					boolean filterResult = false;
+					//判断是函数约束还是操作符约束
+					//若为函数约束，则得到函数名，参数的值（通过index得到，应当只有一个实例），调用函数约束执行函数filter_execute_funcRule1得到true或者false来判断当前的index是否满足要求
+					//若为操作符约束，则直接调用excute_tree_exper函数得到true或者false来判断当前的index是否满足要求
+					if(ctx.constraint().expression()!=null){
+						//操作符约束，调用excute_tree_exper
+						filterResult = Boolean.parseBoolean(filter_excute_exper(ctx.constraint().expression()));
+//						System.out.print(filterResult);
+					}else if(ctx.constraint().functionList() != null){
 			
+						//函数约束
+						//得到函数的名称，得到参数的个数，得到参数的名称，然后调用相应的函数进行查询
+						Map<String,String> funcMap = new HashMap<String, String>();
+						//得到函数名称 只考虑一个函数名称
+						String funcnameString = ctx.constraint().functionList().function().get(0).ID().getText();
+						//得到参数个数
+						String paramscountString =Integer.toString(ctx.constraint().functionList().function().get(0).paramDeclList().expression().size());
+						//得到参数名称字符串
+						String paramsString = ctx.constraint().functionList().function().get(0).paramDeclList().getText();
+						funcMap.put("FuncName", funcnameString);
+						funcMap.put("ParamsCount", paramscountString);
+						funcMap.put("Params", paramsString);
+						filterResult = Boolean.parseBoolean(filter_excute_func(funcMap));
+						
+					}
+					//if（满足约束条件）保存当前的index IndexSet.add(index);
+					if(filterResult){
+						int[] temp = new int[index.length];
+						for(int j = 0;j<temp.length;j++){
+							temp[j] = index[j];
+						}
+						IndexSet.add(temp);					
+					}
+					Iterator iterator1 = this.IndexSet.iterator();//对满足条件的index遍历
+
+				}
+														
+			}
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw  new VarNotDefineException("存在未定义变量！"+"\n");
 		}
+		
 		
 		return;
 
@@ -938,30 +1062,39 @@ public class SpatialSelect {
 	 * 执行完一条filter语句后执行此函数，对三元组进行回溯查询执行
 	 */
 
-	public void tirple_excute_racall() {
+	public void tirple_excute_racall() throws VarNotDefineException{
 		// TODO Auto-generated method stub
 		int size = this.Triples.size();
 		for (int i = size-1; i>=0; i--) {
-			if(Triples.get(i).tripleMap.get("Subject").startsWith("?")&&Triples.get(i).tripleMap.get("Object").startsWith("?")){
-				//判断若主语在FilterVars中出现过且宾语没有在Filter中出现,则调用类型3
-				if(GetFilterValue(Triples.get(i).tripleMap.get("Subject"))!=null&&GetFilterValue(Triples.get(i).tripleMap.get("Object"))==null){
-					
-					triple_execute_rule3(Triples.get(i).tripleMap);
-					//将主语当做已知，宾语当做待求
-					//最后还要把求出来的变量放入FilterVars
-					AddFikterVars(Triples.get(i).tripleMap.get("Object"), GetVarsVar(Triples.get(i).tripleMap.get("Object")));
-					
-				}else if(GetFilterValue(Triples.get(i).tripleMap.get("Subject"))==null&&GetFilterValue(Triples.get(i).tripleMap.get("Object"))!=null){//判断若主语没有在FilterVars中出现过且宾语在Filter中出现,则调用类型2
-					triple_execute_rule2(Triples.get(i).tripleMap);
-					//将主语当做待求，宾语当做已知
-					//最后还要把求出来的变量放入FilterVars
-					AddFikterVars(Triples.get(i).tripleMap.get("Subject"), GetVarsVar(Triples.get(i).tripleMap.get("Subject")));
-					
-				}else{
-					
-					continue;//否则继续下一个循环
+			try {
+				if(Triples.get(i).tripleMap.get("Subject").startsWith("?")&&Triples.get(i).tripleMap.get("Object").startsWith("?")){
+					//判断若主语在FilterVars中出现过且宾语没有在Filter中出现,则调用类型3
+					if(GetFilterValue(Triples.get(i).tripleMap.get("Subject"))!=null&&GetFilterValue(Triples.get(i).tripleMap.get("Object"))==null){
+						
+						triple_execute_rule3(Triples.get(i).tripleMap);
+						//将主语当做已知，宾语当做待求
+						//最后还要把求出来的变量放入FilterVars
+						AddFikterVars(Triples.get(i).tripleMap.get("Object"), GetVarsVar(Triples.get(i).tripleMap.get("Object")));
+						
+					}else if(GetFilterValue(Triples.get(i).tripleMap.get("Subject"))==null&&GetFilterValue(Triples.get(i).tripleMap.get("Object"))!=null){//判断若主语没有在FilterVars中出现过且宾语在Filter中出现,则调用类型2
+						triple_execute_rule2(Triples.get(i).tripleMap);
+						//将主语当做待求，宾语当做已知
+						//最后还要把求出来的变量放入FilterVars
+						AddFikterVars(Triples.get(i).tripleMap.get("Subject"), GetVarsVar(Triples.get(i).tripleMap.get("Subject")));
+						
+					}else{
+						
+						continue;//否则继续下一个循环
+					}
 				}
+			} catch (OntoNotDefineExcetion e) {
+//				System.err.print("\""+ctx.getText()+"\""+" : "+e.getMessage()+"\n");
+				// TODO: handle exception
+			} catch (NoPropertyException e) {
+//				System.err.print("\""+ctx.getText()+"\""+" : "+e.getMessage()+"\n");
+				// TODO: handle exception
 			}
+			
 			
 			
 			
@@ -970,12 +1103,12 @@ public class SpatialSelect {
 	}
 
 
-	public void triple_excute(Map<String, String> paramMap) {
+	public void triple_excute(Map<String, String> paramMap) throws UnkownTripleTypeException,NoPropertyException,OntoNotDefineExcetion {
 		// TODO Auto-generated method stub
 		//调用函数判断三元组语法的规则
 		
 				//根据不同的语法规则
-				int type = juge_triple_condition(paramMap);
+				int type = judge_triple_condition(paramMap);
 				switch (type) {
 				case 1:
 					triple_execute_rule1(paramMap);
@@ -993,21 +1126,13 @@ public class SpatialSelect {
 					triple_execute_rule5(paramMap);
 					break;
 				case 6:
-					//抛出异常
-					System.out.print("unknown condition");
-					break;
+					throw new UnkownTripleTypeException("主语宾语均为值，未知的三元组类型");
 				case 7:
-					//抛出异常
-					System.out.print("unknown condition");
-					break;
+					throw new UnkownTripleTypeException("主语为值，未知的三元组类型");
 				case 8:
-					//抛出异常
-					System.out.print("unknown condition");
-					break;
+					throw new UnkownTripleTypeException("主语宾语均为待求变量，未知的三元组类型");
 				case 9:
-					//抛出异常
-					System.out.print("unknown condition");
-					break;
+					throw new UnkownTripleTypeException("主语为值，未知的三元组类型");
 				default:
 					break;
 				}

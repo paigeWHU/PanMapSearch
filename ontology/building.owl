@@ -794,11 +794,6 @@
         <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
@@ -846,7 +841,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
@@ -1599,8 +1594,8 @@
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
