@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.lmars.panmap.exception.NoSelectVarException;
+
 public class Variable {
 	
 	  public Variable(String nameString,Map<String,Set<String>> varmap) {
@@ -16,58 +18,46 @@ public class Variable {
 		  this.varMap = varmap;		  		  
 	}
 	  
-	  public double  IriLength() {
-		 
-//			Set     set1     =     this.varMap.entrySet();   
-//	        Iterator     iterator1     =     set1.iterator();   
-//	        while     (iterator1.hasNext()  ) 
-//	        {   
-//	          Map.Entry     mapentry     =     (Map.Entry)     iterator1.next();   
-//	          return ((Set<String>)mapentry.getValue()).size();        
-//	        }   
+	  public double  IriLength() throws NoSelectVarException {
 		  
-		  return varMap.get(NameString).size();//异常捕获
+		  try {
+			  return varMap.get(NameString).size();//异常捕获
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new NoSelectVarException("查询变量未在查询语句中出现\n！");
+		}
+		 
 	        
 //	       return 0;
 	}
 	
 	public String VarName(){
-//		Set     set1     =     this.varMap.entrySet();   
-//        Iterator     iterator1     =     set1.iterator();   
-//        while     (iterator1.hasNext()  ) 
-//        {   
-//          Map.Entry     mapentry     =     (Map.Entry)     iterator1.next();   
-//          return mapentry.getKey().toString();        
-//        }   
-//        
-//       return null;
 		return this.NameString;
 	}
 	
-	public Set<String> VarIri(){
-//		Set     set1     =     this.varMap.entrySet();   
-//        Iterator     iterator1     =     set1.iterator();   
-//        while     (iterator1.hasNext()  ) 
-//        {   
-//          Map.Entry     mapentry     =     (Map.Entry)     iterator1.next();   
-//          return (Set<String>)mapentry.getValue();        
-//        }   
-//        
-//       return null;
-		return varMap.get(NameString);
+	public Set<String> VarIri() {
+		
+			return varMap.get(NameString);
+		
+		
 	}
 
-	public String IndexIri(int index) {
-		 
-		Set<String> set = this.varMap.get(NameString);
-		Iterator iterator = set.iterator();
-		int temp = 0;
-		String IriString = "";
-		while(temp<=index&&iterator.hasNext()){
-			IriString = iterator.next().toString();
-			temp++;
-		}
-		return IriString;
+	public String IndexIri(int index) throws NoSelectVarException {
+		try {		
+			Set<String> set = this.varMap.get(NameString);
+			Iterator iterator = set.iterator();
+			int temp = 0;
+			String IriString = "";
+			while(temp<=index&&iterator.hasNext()){
+				IriString = iterator.next().toString();
+				temp++;
+			}
+			return IriString;
+		
+		} catch (NullPointerException e) {
+			// TODO: handle exception
+			throw new NoSelectVarException("查询变量未在查询语句中出现！\n");
+		} 
 		
 	}
 	public void SetIndex(int index){

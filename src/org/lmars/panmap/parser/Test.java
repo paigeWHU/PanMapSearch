@@ -97,11 +97,11 @@ public class Test {
 						+"FILTER (?Level<2) ."										
 						+ "}"
 				,
-				//查询三楼的朱老师学生所在机房
+				//查询三楼的朱老师学生所在机房,以及在三楼的学生
 				"PREFIX Student: <http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#Student>"
 						+ "PREFIX Teacher: <http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#Teacher>"
 						+ "PREFIX ComputerRoom: <http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#ComputerRoom>"
-						+ "Select ?Room_X "
+						+ "Select ?Room_X ?Student_Zhu "
 						+ "Where"
 						+ "{"
 						+ "?Teacher_Zhu Teacher:LevelNo \"2\" ."

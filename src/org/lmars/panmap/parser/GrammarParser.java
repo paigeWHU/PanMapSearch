@@ -10,6 +10,7 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.tool.Rule;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.lmars.panmap.exception.NoPropertyException;
+import org.lmars.panmap.exception.NoSelectVarException;
 import org.lmars.panmap.exception.OntoNotDefineExcetion;
 import org.lmars.panmap.exception.UnkownTripleTypeException;
 import org.lmars.panmap.exception.VarNotDefineException;
@@ -55,11 +56,19 @@ public class GrammarParser extends SparqlBaseListener{
 	
 
 
-		Set<String> setResulteSet =  spatialSelect.SelectResult();
+		Map<String, Set<String>> ResulteMap =  spatialSelect.SelectResult();
 		try {
-			Iterator<String> iterator = setResulteSet.iterator();
-			while (iterator.hasNext()) {			
-				System.out.println(iterator.next());
+//			Iterator iterator = ((Set<String>) ResulteMap).iterator();
+//			while (iterator.hasNext()) {
+//				
+//				System.out.println(iterator.next());
+//			}
+			Set<String> keySet = ResulteMap.keySet();
+			Iterator iterator = keySet.iterator();
+			while (iterator.hasNext()) {
+				String keyString = (String) iterator.next();
+				System.out.print(keyString+" : "+String.valueOf(ResulteMap.get(keyString))+"\n");
+				
 			}
 		} catch (NullPointerException e) {
 			// TODO: handle exception
@@ -221,6 +230,9 @@ public class GrammarParser extends SparqlBaseListener{
 		} catch (VarNotDefineException e) {
 			// TODO: handle exception
 			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage());
+		} catch (NoSelectVarException e) {
+			// TODO: handle exception
+			System.err.print(e.getMessage());
 		}
 		
 		
