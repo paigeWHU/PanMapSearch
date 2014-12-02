@@ -1,4 +1,4 @@
-// Generated from F:\05Postgraduate\antlr\pro\PanMapSearch\src\org\lmars\panmap\parser/Sparql.g4 by ANTLR 4.4
+// Generated from F:\05Postgraduate\antlr\pro\PanMapSearch\src\org\lmars\sparql\parser/Sparql.g4 by ANTLR 4.4
 package org.lmars.sparql.parser;
 
 import org.antlr.v4.runtime.ParserRuleContext;
