@@ -1191,6 +1191,11 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">朱欣焰</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:Reserch_Dir"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">分布式空间数据库，webGIS,移动GIS应用，地理空间信息网络服务
@@ -1217,11 +1222,6 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">http://www.lmars.whu.edu.cn/prof_web/zhuxinyan/index.html#</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">朱欣焰</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
@@ -1239,8 +1239,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">李灿
-</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">李灿</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
@@ -1604,8 +1603,8 @@
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>

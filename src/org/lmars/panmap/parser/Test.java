@@ -1,12 +1,31 @@
 package org.lmars.panmap.parser;
 
+
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
 import org.lmars.panmap.exception.NoPropertyException;
+import org.lmars.panmap.geo.GeoLineString;
+import org.lmars.panmap.geo.GeoMultiLineString;
+import org.lmars.panmap.geo.GeoMultiPolygon;
+import org.lmars.panmap.geo.GeoPoint;
+import org.lmars.panmap.geo.GeoPolygon;
+import org.lmars.panmap.geo.Geometry;
+import org.lmars.panmap.geo.GeometryFactory;
+import org.lmars.panmap.geo.MyPoint;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 public class Test {
 
@@ -43,10 +62,34 @@ public class Test {
 
 
 
-		
-		
-		
-				
+//		SpatialSelect spatialSelect = new SpatialSelect();
+//		
+//		
+//				
+//		Geometry geometry =  spatialSelect.GetGeometry("1");
+//		String typeString = geometry.geometryType.toString();
+//		System.out.print(typeString);
+//		switch (typeString) {
+//		case "MultiLineString":
+//			System.out.print(String.valueOf(((GeoMultiLineString)geometry).geoLineStrings.get(0).linePoints.get(0).x)+"\n");
+//			break;
+//		case "Point":
+//			System.out.print(String.valueOf(((GeoPoint)geometry).point.x));
+//			break;
+//		case "LineString":
+//			System.out.print(String.valueOf(((GeoLineString)geometry).linePoints.get(0).x));
+//			break;
+//		case "Polygon":
+//			System.out.print(String.valueOf(((GeoPolygon)geometry).polygonRings.get(0).ringPoints.get(0).x));
+//			break;
+//		case "MultiPolygon":
+//			GeoMultiPolygon geoPolygons = (GeoMultiPolygon)geometry;
+//			System.out.print(String.valueOf(geoPolygons.geoPolygons.get(0).polygonRings.get(0).ringPoints.get(0).x));	
+//		default:
+//			break;
+//		}
+//		
+	
 		
 		
 		GrammarParser grammarParser = new GrammarParser();
@@ -63,7 +106,7 @@ public class Test {
 				+ "Select ?TeacherX "
 				+ "Where"
 				+ "{"
-				+ "?Teacher_Zhu Teacher:Name \"ﬂ√Œ¨\" ."
+				+ "?Teacher_Zhu Teacher:Name \"÷Ï–¿—Ê\" ."
 				+ "?Teacher_Zhu  Teacher:Has_Office ?Room_Zhu ."
 				+ "?TeacherX   Teacher:Has_Office ?Room_X ."
 				+ "FILTER (Opposite(?Room_X,?Room_Zhu)) ."
@@ -74,7 +117,7 @@ public class Test {
 				+ "Select ?Student_Zhu "
 				+ "Where"
 				+ "{"
-				+ "?Teacher_Zhu Teacher:Name \"ﬂ√Œ¨\" ."
+				+ "?Teacher_Zhu Teacher:Name \"÷Ï–¿—Ê\" ."
 				+ "?Teacher_Zhu  Teacher:Teach ?Student_Zhu ."
 				
 				+ "}"
@@ -84,7 +127,7 @@ public class Test {
 						+ "Select ?room "
 						+ "Where"
 						+ "{"
-						+ "?Teacher Teacher:Name \"ﬂ√Œ¨\" ."
+						+ "?Teacher Teacher:Name \"÷Ï–¿—Ê\" ."
 						+ "?Teacher Teacher:Has_Office ?room ."											
 						+ "}"
 				,
@@ -113,7 +156,7 @@ public class Test {
 										     	
 		};
 
-		for (int i = 4; i < 5; i++) {
+		for (int i = 0; i < 1; i++) {
 //			System.out.print(testNameStrings[i]);
 			grammarParser.run(testStr[i]);
 		}

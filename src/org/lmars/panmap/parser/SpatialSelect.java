@@ -1,5 +1,10 @@
 package org.lmars.panmap.parser;
+import net.sf.json.JSON;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
 import org.lmars.sparql.parser.*;
+import org.lmars.panmap.geo.*;
 import org.antlr.v4.codegen.model.chunk.ThisRulePropertyRef_ctx;
 import org.antlr.v4.parse.ANTLRParser.id_return;
 import org.antlr.v4.parse.ANTLRParser.throwsSpec_return;
@@ -20,12 +25,16 @@ import java.util.regex.Pattern;
 import org.owlapi.OWL;
 import org.stringtemplate.v4.compiler.CodeGenerator.region_return;  
 import org.lmars.panmap.exception.*;
+import  org.postgresql. * ;
+
+import  java.sql. * ;
 public class SpatialSelect {
 	
 	/*
 	 * 构造函数
 	 */
 	public SpatialSelect() {
+		
 		this.Vars = new ArrayList<Variable>();
 		this.Triples = new ArrayList<Triple>();
 		this.FilterVars = new ArrayList<Variable>();
@@ -170,12 +179,18 @@ public class SpatialSelect {
 	 * 添加Vars变量的函数 判断重复性
 	 */
 	
-	public void AddFikterVars(String name,Variable var){
+	public void AddFikterVars(String name,Variable var) throws VarNotDefineException{
 		Iterator iterator = this.FilterVars.iterator();
 		while(iterator.hasNext()){
 			Variable variable = (Variable) iterator.next();
-			if(variable.NameString.equals(name))
-				return;
+			try {
+				if(variable.NameString.equals(name))
+					return;
+			} catch (NullPointerException e) {
+				// TODO: handle exception
+				throw new VarNotDefineException("变量"+name+"没有定义！");
+			}
+			
 		}
 		this.FilterVars.add(var);
 	}
@@ -1125,7 +1140,47 @@ public class SpatialSelect {
 		return selecetMap;
 	}
 	
+	
+	/*
+	 * 根据ID从postgis数据库中将点线面的信息读取出来
+	 */
+	public Geometry GetGeometry(String ID) throws SQLException{
 
+         Connection conn = null;
+		 java.sql.Statement st=null;
+		 ResultSet rs=null;
+		 String url = "jdbc:postgresql://localhost:5432/postgis_21_sample";
+		 String user = "postgres";
+		 String password = "admin";
+		 JSONObject resultJson = null;
+		 try{
+			 Class.forName("org.postgresql.Driver");
+			 conn = DriverManager.getConnection(url,user,password);
+			 st = conn.createStatement();
+			 String sql="select ST_AsGeoJSON(geom) from funcare_1_featuretopolygon1 where gid="+ID;
+			 rs = ((java.sql.Statement) st).executeQuery(sql);
+			
+			 while(rs.next())
+			 {
+				 resultJson = JSONObject.fromObject(rs.getObject(1).toString());
+//				String typeName=(JSON)rs.getObject(1);
+//				System.out.print(resultJson.getJSONObject(1).get("type")+"\n");
+				
+			 }
+			 
+	     }catch(Exception e){
+			 e.printStackTrace();
+	     }finally{
+	    	  rs.close();
+	          st.close();
+	          conn.close();
+	     }
+			
+		Geometry geometry = GeometryFactory.createGeometryBase(resultJson );
+		return geometry;
+	}
+	
+	
 	/*
 	 * 存储查询过程中需要的变量。包括Prefix以及一些未知和带入的变量
 	 */

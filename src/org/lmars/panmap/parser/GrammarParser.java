@@ -196,12 +196,12 @@ public class GrammarParser extends SparqlBaseListener{
 			spatialSelect.triple_excute(paramMap);	//应当在这里捕捉异常
 		} catch (UnkownTripleTypeException e) {
 			// TODO: handle exception
-			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
+			System.err.print(e.getClass().getName()+":"+"["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
 		} catch (OntoNotDefineExcetion e) {
-			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
+			System.err.print(e.getClass().getName()+":"+"["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
 			// TODO: handle exception
 		} catch (NoPropertyException e) {
-			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
+			System.err.print(e.getClass().getName()+":"+"["+ctx.getText()+"]"+" : "+e.getMessage()+"\n");
 			// TODO: handle exception
 		}
 		
@@ -218,9 +218,7 @@ public class GrammarParser extends SparqlBaseListener{
 	
 	@Override public void exitFilter(@NotNull SparqlParser.FilterContext ctx) 
 	{
-		grammerString = "NoFilter";//从filter的语法出去
-	//	Iterator<Variable> iterator = spatialSelect.Vars.iterator();
-		
+		grammerString = "NoFilter";//从filter的语法出去		
 		try {
 			
 			spatialSelect.filter_excute(ctx);//这里也要捕捉异常
@@ -229,24 +227,29 @@ public class GrammarParser extends SparqlBaseListener{
 		
 		} catch (VarNotDefineException e) {
 			// TODO: handle exception
-			System.err.print("["+ctx.getText()+"]"+" : "+e.getMessage());
+			System.err.print(e.getClass().getName()+":"+"["+ctx.getText()+"]"+" : "+e.getMessage());
 		} catch (NoSelectVarException e) {
 			// TODO: handle exception
-			System.err.print(e.getMessage());
-		}
-		
-		
+			System.err.print(e.getClass().getName()+":"+e.getMessage());
+		}				
 	}
 	
 	
-	@Override public void enterVar(@NotNull SparqlParser.VarContext ctx) 
+	@Override public void enterVar(@NotNull SparqlParser.VarContext ctx)  
 	{
 
+		
 		if(grammerString=="Filter"){
 			//存储到变量FilterVars中
 			String nameString = ctx.getText();
 			Variable variable = spatialSelect.GetVarsVar(nameString);
-			spatialSelect.AddFikterVars(nameString, variable);
+			try {
+				spatialSelect.AddFikterVars(nameString, variable);
+			} catch (VarNotDefineException e) {
+				// TODO: handle exception
+				System.err.print(e.getClass().getName()+":"+e.getMessage()+"\n");
+			}
+			
 		}
 	}
 
