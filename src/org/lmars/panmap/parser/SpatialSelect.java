@@ -5,6 +5,7 @@ import net.sf.json.JSONObject;
 
 import org.lmars.sparql.parser.*;
 import org.lmars.panmap.geo.*;
+import org.lmars.panmap.spatialcompute.SpatialCompute;
 import org.antlr.v4.codegen.model.chunk.ThisRulePropertyRef_ctx;
 import org.antlr.v4.parse.ANTLRParser.id_return;
 import org.antlr.v4.parse.ANTLRParser.throwsSpec_return;
@@ -1051,7 +1052,19 @@ public class SpatialSelect {
 	 * 判断两个本体实例之间是否存在对面的关系
 	 */
 	private boolean Opposite(String iri1, String iri2){
-		return true;
+		//首先要得到iri1、iri2代表的实例在数据库中存储的id
+		String ID1 = IriToID(iri1);
+		String ID2 = IriToID(iri2);
+//		System.out.print(ID1+","+ID2);
+		SpatialCompute spatialCompute = new SpatialCompute("Opposite");
+		boolean result = false;
+		try {
+			result = spatialCompute.judge(ID1, ID2);
+		} catch (SQLException e) {
+			// TODO: handle exception
+			return false;
+		}
+		return result;
 	}
 	
 	
@@ -1060,6 +1073,7 @@ public class SpatialSelect {
 	 */
 	private Set<String> Opposite(String iri1){
 		Set<String> oppositeSet = new HashSet<String>();
+		//返回的是在数据库中存储的id，怎么变成iri
 		return oppositeSet;
 	}
 	
@@ -1157,15 +1171,12 @@ public class SpatialSelect {
 			 Class.forName("org.postgresql.Driver");
 			 conn = DriverManager.getConnection(url,user,password);
 			 st = conn.createStatement();
-			 String sql="select ST_AsGeoJSON(geom) from funcare_1_featuretopolygon1 where gid="+ID;
+			 String sql="select ST_AsGeoJSON(geom) from polygon_r_21 where gid="+ID;
 			 rs = ((java.sql.Statement) st).executeQuery(sql);
 			
 			 while(rs.next())
 			 {
-				 resultJson = JSONObject.fromObject(rs.getObject(1).toString());
-//				String typeName=(JSON)rs.getObject(1);
-//				System.out.print(resultJson.getJSONObject(1).get("type")+"\n");
-				
+				 resultJson = JSONObject.fromObject(rs.getObject(1).toString());			
 			 }
 			 
 	     }catch(Exception e){
@@ -1175,11 +1186,29 @@ public class SpatialSelect {
 	          st.close();
 	          conn.close();
 	     }
-			
 		Geometry geometry = GeometryFactory.createGeometryBase(resultJson );
 		return geometry;
 	}
 	
+	
+	/*
+	 * 根据房间iri得到在数据库中保存的id值
+	 */
+	private String IriToID(String IRI) {
+		String idString = "";
+		 String owlFilePath = "ontology/building.owl"; /* OWL文件路径 */
+	        OWL instance = new OWL(owlFilePath);
+	        String pvIri = "<http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#ObjID_2D>";	     
+	        Set<String> result = instance.readPropertyValueOfInstance(pvIri, IRI);
+	        Iterator iterator = result.iterator();
+	        if (iterator.hasNext()) {
+	        	idString = (String) iterator.next();
+			}
+	    if (idString.startsWith("\"")) {
+			idString = idString.split("\"")[1];
+		}
+		return idString;
+	}
 	
 	/*
 	 * 存储查询过程中需要的变量。包括Prefix以及一些未知和带入的变量

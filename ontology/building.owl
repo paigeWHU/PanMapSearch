@@ -11,10 +11,10 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <Prefix name="" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -811,12 +811,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
         <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
@@ -901,12 +901,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
         <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
         <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
+        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
@@ -1407,6 +1407,11 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
+        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">38</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
         <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
@@ -1479,7 +1484,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
         <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">18</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
@@ -1554,7 +1559,7 @@
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
         <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">40</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
@@ -1591,8 +1596,8 @@
         <ObjectProperty IRI="Own"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
@@ -1603,8 +1608,8 @@
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
+        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
