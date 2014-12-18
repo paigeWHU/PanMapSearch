@@ -1,0 +1,39 @@
+<uml>
+   <greenVersion="30100"/>
+   <type>
+      <name="=PanMapSearch/src<org.lmars.panmap.filter{FilterRuleExper.java[FilterRuleExper"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="606"/>
+      <y="211"/>
+   </type>
+   <type>
+      <name="=PanMapSearch/src<org.lmars.panmap.filter{Filters.java[Filters"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="196"/>
+      <y="34"/>
+   </type>
+   <type>
+      <name="=PanMapSearch/src<org.lmars.panmap.filter{FilterStrategy.java[FilterStrategy"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="635"/>
+      <y="36"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <sourceType="=PanMapSearch/src<org.lmars.panmap.filter{Filters.java[Filters"/>
+      <targetType="=PanMapSearch/src<org.lmars.panmap.filter{FilterStrategy.java[FilterStrategy"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=PanMapSearch/src<org.lmars.panmap.filter{FilterRuleExper.java[FilterRuleExper"/>
+      <targetType="=PanMapSearch/src<org.lmars.panmap.filter{FilterStrategy.java[FilterStrategy"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+</uml>
+
