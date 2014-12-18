@@ -2,1629 +2,1625 @@
 
 
 <!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1415628375607 "http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#" >
 ]>
 
 
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <Prefix name="" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
-    <Prefix name="Ontology1415628375607" IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#"/>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Area"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Balcony"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Bookcase"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Building"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Ceiling"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Chair"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Chimney"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:ClosureSurface"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:ComputerRoom"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:ConstructionWork"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:ControlDevice"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Corridor"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Elevator"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Entrance"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Escalator"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:EscapeLadder"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Exit"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:ExitEntrance"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:FunctionRoom"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Ground"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Laboratory"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Lamp"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Lobby"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:MeetingRoom"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:MovingWalkway"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Object"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Obstacle"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:OfficeDesk"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Parition"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:People"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Pillar"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Pipe"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:PointOfInterest"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Portal"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Radiator"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Rafter"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Ramp"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Roof"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Sofa"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Stairway"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Surface"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Table"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Toilet"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Wall"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="Ontology1415628375607:Window"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="A214"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Room"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SmallRoom"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="Own"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="SomeWhat"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_City"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Country"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Housenumber"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Street"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Architect"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Breast"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingInfo"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidAltitude"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLatitude"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLongitude"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Color"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Condition"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Connectrelation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Description"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Direction"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeColor"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeMaterial"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Glass"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Hole"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Material"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:MaxLevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:MinLevel"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:NavigateMapFile"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:NumberOfLevels"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectID"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Position"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Reserch_Dir"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofColor"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofMaterial"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofShape"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StaffPosition"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Style"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_URL"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Width"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="Name"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="NickName"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Room"/>
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Ontology1415628375607="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#"
+     URI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl">
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Area"/>
+        <Class URI="&Ontology1415628375607;PointOfInterest"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Area"/>
     </Declaration>
     <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Area"/>
-        <Class abbreviatedIRI="Ontology1415628375607:PointOfInterest"/>
+        <Class URI="&Ontology1415628375607;Balcony"/>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Balcony"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Barrier"/>
+        <Class URI="&Ontology1415628375607;Obstacle"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Barrier"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Bookcase"/>
+        <Class URI="&Ontology1415628375607;BuildingFurniture"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Bookcase"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;BoudarySurface"/>
+        <Class URI="&Ontology1415628375607;Surface"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;BoudarySurface"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Building"/>
+        <Class URI="&Ontology1415628375607;Container"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Building"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;BuildingFurniture"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+        <Class URI="&owl;Thing"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;BuildingPart"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Ceiling"/>
+        <Class URI="&Ontology1415628375607;BoudarySurface"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Ceiling"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Chair"/>
+        <Class URI="&Ontology1415628375607;BuildingFurniture"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Chair"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Chimney"/>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Chimney"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;ClosureSurface"/>
+        <Class URI="&Ontology1415628375607;Barrier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Balcony"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
+        <Class URI="&Ontology1415628375607;ClosureSurface"/>
+        <Class URI="&Ontology1415628375607;BoudarySurface"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;ClosureSurface"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;ComputerRoom"/>
+        <Class URI="&Ontology1415628375607;Room"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;ComputerRoom"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;ConstructionWork"/>
+        <Class URI="&Ontology1415628375607;Obstacle"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;ConstructionWork"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Container"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;ControlDevice"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Corridor"/>
+        <Class URI="&Ontology1415628375607;Passage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Corridor"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Doorway"/>
+        <Class URI="&Ontology1415628375607;Barrier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Obstacle"/>
+        <Class URI="&Ontology1415628375607;Doorway"/>
+        <Class URI="&Ontology1415628375607;Opening"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Doorway"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Elevator"/>
+        <Class URI="&Ontology1415628375607;VerticalPassage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Elevator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Entrance"/>
+        <Class URI="&Ontology1415628375607;Doorway"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Entrance"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Escalator"/>
+        <Class URI="&Ontology1415628375607;VerticalPassage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Escalator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;EscapeLadder"/>
+        <Class URI="&Ontology1415628375607;VerticalPassage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;EscapeLadder"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Exit"/>
+        <Class URI="&Ontology1415628375607;Doorway"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Exit"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;ExitEntrance"/>
+        <Class URI="&Ontology1415628375607;Doorway"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;ExitEntrance"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;FunctionRoom"/>
+        <Class URI="&Ontology1415628375607;Room"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;FunctionRoom"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Ground"/>
+        <Class URI="&Ontology1415628375607;BoudarySurface"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Ground"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Laboratory"/>
+        <Class URI="&Ontology1415628375607;Room"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Laboratory"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Lamp"/>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Lamp"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Lobby"/>
+        <Class URI="&Ontology1415628375607;Passage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Lobby"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;MeetingRoom"/>
+        <Class URI="&Ontology1415628375607;Room"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;MeetingRoom"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;MovingWalkway"/>
+        <Class URI="&Ontology1415628375607;Passage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;MovingWalkway"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Object"/>
+        <Class URI="&Ontology1415628375607;PointOfInterest"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Object"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Obstacle"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Office"/>
+        <Class URI="&Ontology1415628375607;Room"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Office"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;OfficeDesk"/>
+        <Class URI="&Ontology1415628375607;BuildingFurniture"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;OfficeDesk"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Opening"/>
+        <Class URI="&Ontology1415628375607;Portal"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Opening"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Parition"/>
+        <Class URI="&Ontology1415628375607;BuildingPart"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Parition"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Passage"/>
+        <Class URI="&Ontology1415628375607;BuildingPart"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Bookcase"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
+        <Class URI="&Ontology1415628375607;Passage"/>
+        <Class URI="&Ontology1415628375607;Container"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Passage"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;People"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Pillar"/>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Pillar"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Pipe"/>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Pipe"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;PointOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Portal"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Radiator"/>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Radiator"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Rafter"/>
+        <Class URI="&Ontology1415628375607;BuildingInstallation"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Rafter"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Ramp"/>
+        <Class URI="&Ontology1415628375607;Passage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Ramp"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Roof"/>
+        <Class URI="&Ontology1415628375607;BoudarySurface"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Roof"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Room"/>
+        <Class URI="&Ontology1415628375607;BuildingPart"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Surface"/>
+        <Class URI="&Ontology1415628375607;Room"/>
+        <Class URI="&Ontology1415628375607;Container"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Room"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Sofa"/>
+        <Class URI="&Ontology1415628375607;BuildingFurniture"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Sofa"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Stairway"/>
+        <Class URI="&Ontology1415628375607;VerticalPassage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Stairway"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Storey"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Student"/>
+        <Class URI="&Ontology1415628375607;People"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Student"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Surface"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Table"/>
+        <Class URI="&Ontology1415628375607;BuildingFurniture"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Table"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Teacher"/>
+        <Class URI="&Ontology1415628375607;People"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Teacher"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Toilet"/>
+        <Class URI="&Ontology1415628375607;Room"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Toilet"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;VerticalPassage"/>
+        <Class URI="&Ontology1415628375607;Passage"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;VerticalPassage"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Wall"/>
+        <Class URI="&Ontology1415628375607;Barrier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Building"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
+        <Class URI="&Ontology1415628375607;Wall"/>
+        <Class URI="&Ontology1415628375607;BoudarySurface"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Wall"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&Ontology1415628375607;Window"/>
+        <Class URI="&Ontology1415628375607;Barrier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-        <Class IRI="Thing"/>
+        <Class URI="&Ontology1415628375607;Window"/>
+        <Class URI="&Ontology1415628375607;Opening"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Ceiling"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Chair"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Chimney"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:ClosureSurface"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:ClosureSurface"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:ComputerRoom"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:ConstructionWork"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Obstacle"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Corridor"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Elevator"/>
-        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Entrance"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Escalator"/>
-        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:EscapeLadder"/>
-        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Exit"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:ExitEntrance"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Doorway"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:FunctionRoom"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Ground"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Laboratory"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Lamp"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Lobby"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:MeetingRoom"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:MovingWalkway"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Object"/>
-        <Class abbreviatedIRI="Ontology1415628375607:PointOfInterest"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:OfficeDesk"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Portal"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Parition"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Pillar"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Pipe"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Radiator"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Rafter"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingInstallation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Ramp"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Roof"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingPart"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Container"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Sofa"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Stairway"/>
-        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
-        <Class abbreviatedIRI="Ontology1415628375607:People"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Table"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BuildingFurniture"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
-        <Class abbreviatedIRI="Ontology1415628375607:People"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Toilet"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Room"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:VerticalPassage"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Passage"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Wall"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Wall"/>
-        <Class abbreviatedIRI="Ontology1415628375607:BoudarySurface"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Window"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Barrier"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="Ontology1415628375607:Window"/>
-        <Class abbreviatedIRI="Ontology1415628375607:Opening"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SmallRoom"/>
-        <Class IRI="Room"/>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Storey"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Building"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Teacher"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Student"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:Office"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Ontology1415628375607:ComputerRoom"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="A214"/>
-        <NamedIndividual IRI="Room"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">一楼</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:一楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">三楼</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:三楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelRasterMap"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">二楼</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Usage"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:二楼"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">呙维</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Reserch_Dir"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">智慧城市时空数据流计算、自然语言位置解析、机器人导航与Kinect实时制图等</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">男</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StaffPosition"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">副教授</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">101</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_URL"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:呙维"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.lmars.whu.edu.cn/WebSiteDetail.asp?webid=178&amp;type=4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_City"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">武汉</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Country"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">中国</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Housenumber"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">129</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Addr_Street"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">珞瑜路</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Architect"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">钢筋混凝土</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingDate"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1998</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingInfo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidAltitude"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">20</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLatitude"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">30.533527
-</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:CentroidLongitude"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">114.366721
-</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Condition"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">建成</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Description"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeColor"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">白色</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:FacadeMaterial"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">乳胶漆</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Height"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">20</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:MaxLevel"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:MinLevel"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">实验室</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:NavigateMapFile"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:NumberOfLevels"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">武汉大学</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofColor"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">黑色</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofMaterial"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">沥青</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:RoofShape"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">长方形</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Style"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">中式风格</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:实验室"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">教学科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">朱欣焰</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Reserch_Dir"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">分布式空间数据库，webGIS,移动GIS应用，地理空间信息网络服务
-</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">男</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StaffPosition"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">空间信息系统研究室主任</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">205</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_URL"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:朱欣焰"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.lmars.whu.edu.cn/prof_web/zhuxinyan/index.html#</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">研一</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">李灿</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">女</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">327</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2014206190005</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">朱欣焰</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:李灿"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">205</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">研一</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">杨龙龙</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">男</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">327</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2014206190001</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">朱欣焰</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:杨龙龙"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">205</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Grade"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">研二</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">黄珺</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Sex"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">女</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentComputerRoom"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">327</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:StudentNo"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2013206190076</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:TeacherName"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">朱欣焰</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Teacher_Office"/>
-        <NamedIndividual abbreviatedIRI="Ontology1415628375607:黄珺"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">205</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">101</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">38</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">呙维</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#101"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">办公室</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">205</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">18</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">朱欣焰</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#205"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">办公室</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Box3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:BuildingNo"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">B1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Functions"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">科研</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Geometry3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:LevelNo"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Name"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">327</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_2D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">40</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjID_3D"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectImportance"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationCol"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:ObjectLocationRow"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NULL</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Owner"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">实验室</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="Ontology1415628375607:Type"/>
-        <NamedIndividual IRI="http://www.semanticweb.org/dell327/ontologies/2014/10/Ontology1415628375607.owl#327"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">机房</Literal>
-    </DataPropertyAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="SomeWhat"/>
-        <ObjectProperty IRI="Own"/>
-    </SubObjectPropertyOf>
+    <Declaration>
+        <Class URI="&Ontology1415628375607;Window"/>
+    </Declaration>
     <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BeTaught"/>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Teach"/>
+        <ObjectProperty URI="&Ontology1415628375607;BeTaught"/>
+        <ObjectProperty URI="&Ontology1415628375607;Teach"/>
     </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Level"/>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToBuilding"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Room"/>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:BelongToLevel"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Own"/>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Office"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Has_Student"/>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Locate_ComputerRoom"/>
-    </InverseObjectProperties>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;BeTaught"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToBuilding"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToLevel"/>
+    </Declaration>
     <SymmetricObjectProperty>
-        <ObjectProperty abbreviatedIRI="Ontology1415628375607:Corporation"/>
+        <ObjectProperty URI="&Ontology1415628375607;Corporation"/>
     </SymmetricObjectProperty>
-    <SubDataPropertyOf>
-        <DataProperty IRI="NickName"/>
-        <DataProperty IRI="Name"/>
-    </SubDataPropertyOf>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Corporation"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Level"/>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToBuilding"/>
+    </InverseObjectProperties>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Level"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Office"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Room"/>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToLevel"/>
+    </InverseObjectProperties>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Room"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Student"/>
+        <ObjectProperty URI="&Ontology1415628375607;Locate_ComputerRoom"/>
+    </InverseObjectProperties>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Student"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Locate_ComputerRoom"/>
+    </Declaration>
+    <InverseObjectProperties>
+        <ObjectProperty URI="&Ontology1415628375607;Own"/>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Office"/>
+    </InverseObjectProperties>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Own"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty URI="&Ontology1415628375607;Teach"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Addr_City"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Addr_Country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Addr_Housenumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Addr_Street"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Architect"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Box2D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Box3D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Breast"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;BuildingDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;BuildingInfo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;CentroidAltitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;CentroidLatitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;CentroidLongitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Color"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Condition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Connectrelation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Direction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;FacadeColor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;FacadeMaterial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Functions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Geometry2D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Geometry3D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Glass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Grade"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Height"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Hole"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;LevelRasterMap"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;MaxLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;MinLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;NavigateMapFile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;NumberOfLevels"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;ObjID_2D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;ObjID_3D"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;ObjectID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;ObjectImportance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationCol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationRow"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Owner"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Position"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Reserch_Dir"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;RoofColor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;RoofMaterial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;RoofShape"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Sex"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;StaffPosition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;StudentComputerRoom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;StudentNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Style"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;TeacherName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Teacher_Office"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Teacher_URL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Usage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty URI="&Ontology1415628375607;Width"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Office"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToLevel"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Own"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Box2D"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Box3D"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Functions"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Geometry2D"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Geometry3D"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>101</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjID_2D"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>38</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjID_3D"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectImportance"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>0</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationCol"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationRow"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Owner"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>&#21593;&#32500;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Type"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+        <Constant>&#21150;&#20844;&#23460;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;101"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Office"/>
+        <Individual URI="&Ontology1415628375607;204"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Own"/>
+        <Individual URI="&Ontology1415628375607;204"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#22235;"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;204"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;204"/>
+        <Constant>2</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;204"/>
+        <Constant>204</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjID_2D"/>
+        <Individual URI="&Ontology1415628375607;204"/>
+        <Constant>38</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;204"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Office"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToLevel"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Own"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Box2D"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Box3D"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Functions"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Geometry2D"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Geometry3D"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>2</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>205</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjID_2D"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>18</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjID_3D"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectImportance"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>0</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationCol"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationRow"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Owner"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>&#26417;&#27427;&#28976;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Type"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+        <Constant>&#21150;&#20844;&#23460;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;205"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;ComputerRoom"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToLevel"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Student"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Student"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Student"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Box2D"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Box3D"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Functions"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Geometry2D"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Geometry3D"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>3</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>327</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjID_2D"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjID_3D"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectImportance"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>0</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationCol"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;ObjectLocationRow"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Owner"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>&#23454;&#39564;&#23460;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Type"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+        <Constant>&#26426;&#25151;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;327"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Storey"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToBuilding"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Room"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Height"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Constant>4</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Constant>1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelRasterMap"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Constant>&#19968;&#27004;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Usage"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+        <Constant>&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Storey"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToBuilding"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Room"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Height"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Constant>4</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Constant>3</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelRasterMap"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Constant>&#19977;&#27004;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Usage"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+        <Constant>&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Storey"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BelongToBuilding"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Room"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Height"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Constant>4</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Constant>2</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelRasterMap"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Constant>&#20108;&#27004;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Usage"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+        <Constant>&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Teacher"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Corporation"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Own"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Individual URI="&Ontology1415628375607;101"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant>1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant>&#21593;&#32500;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Reserch_Dir"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant
+            >&#26234;&#24935;&#22478;&#24066;&#26102;&#31354;&#25968;&#25454;&#27969;&#35745;&#31639;&#12289;&#33258;&#28982;&#35821;&#35328;&#20301;&#32622;&#35299;&#26512;&#12289;&#26426;&#22120;&#20154;&#23548;&#33322;&#19982;Kinect&#23454;&#26102;&#21046;&#22270;&#31561;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Sex"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant>&#30007;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StaffPosition"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant>&#21103;&#25945;&#25480;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Teacher_Office"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant>101</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Teacher_URL"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+        <Constant
+            >http://www.lmars.whu.edu.cn/WebSiteDetail.asp?webid=178&amp;type=4</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Building"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Level"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Individual URI="&Ontology1415628375607;&#19968;&#27004;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Level"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Individual URI="&Ontology1415628375607;&#19977;&#27004;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Level"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Individual URI="&Ontology1415628375607;&#20108;&#27004;"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Addr_City"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#27494;&#27721;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Addr_Country"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#20013;&#22269;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Addr_Housenumber"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>129</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Addr_Street"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#29662;&#29788;&#36335;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Architect"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#38050;&#31563;&#28151;&#20957;&#22303;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingDate"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>1998</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingInfo"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;CentroidAltitude"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>20</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;CentroidLatitude"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>30.533527
+</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;CentroidLongitude"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>114.366721
+</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Condition"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#24314;&#25104;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Description"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;FacadeColor"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#30333;&#33394;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;FacadeMaterial"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#20083;&#33014;&#28422;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Height"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>20</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;MaxLevel"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>4</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;MinLevel"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#23454;&#39564;&#23460;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;NavigateMapFile"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>NULL</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;NumberOfLevels"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>4</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Owner"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#27494;&#27721;&#22823;&#23398;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;RoofColor"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#40657;&#33394;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;RoofMaterial"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#27813;&#38738;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;RoofShape"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#38271;&#26041;&#24418;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Style"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#20013;&#24335;&#39118;&#26684;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Type"/>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+        <Constant>&#25945;&#23398;&#31185;&#30740;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#23454;&#39564;&#23460;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Teacher"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Corporation"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Individual URI="&Ontology1415628375607;&#21593;&#32500;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Office"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Individual URI="&Ontology1415628375607;205"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Teach"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Teach"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Teach"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant>2</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant>&#26417;&#27427;&#28976;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Reserch_Dir"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant
+            >&#20998;&#24067;&#24335;&#31354;&#38388;&#25968;&#25454;&#24211;&#65292;webGIS,&#31227;&#21160;GIS&#24212;&#29992;&#65292;&#22320;&#29702;&#31354;&#38388;&#20449;&#24687;&#32593;&#32476;&#26381;&#21153;
+</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Sex"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant>&#30007;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StaffPosition"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant>&#31354;&#38388;&#20449;&#24687;&#31995;&#32479;&#30740;&#31350;&#23460;&#20027;&#20219;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Teacher_Office"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant>205</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Teacher_URL"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+        <Constant
+            >http://www.lmars.whu.edu.cn/prof_web/zhuxinyan/index.html#</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Teacher"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#22235;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Has_Office"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#22235;"/>
+        <Individual URI="&Ontology1415628375607;204"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#22235;"/>
+        <Constant>&#26446;&#22235;</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#26446;&#22235;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Student"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BeTaught"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Locate_ComputerRoom"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Grade"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>&#30740;&#19968;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>3</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>&#26446;&#28799;
+</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Sex"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>&#22899;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StudentComputerRoom"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>327</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StudentNo"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>2014206190005</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;TeacherName"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>&#26417;&#27427;&#28976;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Teacher_Office"/>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+        <Constant>205</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#26446;&#28799;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Student"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BeTaught"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Locate_ComputerRoom"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Grade"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>&#30740;&#19968;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant></Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>3</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>&#26472;&#40857;&#40857;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Sex"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>&#30007;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StudentComputerRoom"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>327</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StudentNo"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>2014206190001</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;TeacherName"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>&#26417;&#27427;&#28976;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Teacher_Office"/>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+        <Constant>205</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#26472;&#40857;&#40857;"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class URI="&Ontology1415628375607;Student"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;BeTaught"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Individual URI="&Ontology1415628375607;&#26417;&#27427;&#28976;"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty URI="&Ontology1415628375607;Locate_ComputerRoom"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Individual URI="&Ontology1415628375607;327"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;BuildingNo"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>B1</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Grade"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>&#30740;&#20108;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;LevelNo"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>3</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Name"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>&#40644;&#29690;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Sex"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>&#22899;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StudentComputerRoom"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>327</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;StudentNo"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>2013206190076</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;TeacherName"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>&#26417;&#27427;&#28976;</Constant>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty URI="&Ontology1415628375607;Teacher_Office"/>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+        <Constant>205</Constant>
+    </DataPropertyAssertion>
+    <Declaration>
+        <Individual URI="&Ontology1415628375607;&#40644;&#29690;"/>
+    </Declaration>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
 

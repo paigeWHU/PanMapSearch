@@ -181,15 +181,14 @@ public class OppositeStrategy extends ComputeStrategy {
 		 Connection conn = null;
 		 java.sql.Statement st=null;
 		 ResultSet rs=null;
-		 String url = "jdbc:postgresql://localhost:5432/postgis_21_sample";
-		 String user = "postgres";
-		 String password = "admin";
+		 String url = "jdbc:postgresql://"+excuteVar.address;
+		 String user = excuteVar.user;
+		 String password = excuteVar.pass;
 		 JSONObject resultJson = null;
 		 try{
 			 Class.forName("org.postgresql.Driver");
 			 conn = DriverManager.getConnection(url,user,password);
 			 st = conn.createStatement();
-//			 String sql="select calss, ST_AsText(geom) from polygon_r_2 where gid="+"26";
 			 rs = ((java.sql.Statement) st).executeQuery(sqlString);
 			
 
@@ -200,8 +199,7 @@ public class OppositeStrategy extends ComputeStrategy {
 	          st.close();
 	          conn.close();
 	     }finally{
-//	    	  rs.close();
-//	          st.close();
+
 	          conn.close();
 	     }
 		 return rs;
